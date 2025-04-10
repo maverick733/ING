@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMEC Engineering - Innovative Engineering Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="/home/uni/Documents/Webpage-Ing/images/logo.jpg" alt="BMEC Logo" class="logo-img">
+                <div class="logo">BMEC<span>Engineering</span></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" data-i18n="nav.home">Startseite</a></li>
+                    <li><a href="#team" data-i18n="nav.team">Team</a></li>
+                    <li><a href="#services" data-i18n="nav.services">Leistungen</a></li>
+                    <li><a href="#projects" data-i18n="nav.projects">Projekte</a></li>
+                    <li><a href="#news" data-i18n="nav.news">News</a></li>
+                    <li><a href="#booking" data-i18n="nav.booking">Termin buchen</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
+                    <li>
+                        <div class="language-switcher">
+                            <button class="language-btn active" data-lang="de">DE</button>
+                            <button class="language-btn" data-lang="en">EN</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1 data-i18n="hero.title">Innovative Maschinenbaulösungen</h1>
+            <p data-i18n="hero.description">Wir entwickeln maßgeschneiderte technische Lösungen für Industrie und Produktion. Unser erfahrenes Team steht für Präzision, Innovation und Zuverlässigkeit.</p>
+            <a href="#booking" class="btn" data-i18n="hero.button">Termin buchen</a>
+        </div>
+    </section>
+
+    <div class="container tab-container" id="services">
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="tab1" data-i18n="services.tab1">Konstruktion</button>
+            <button class="tab-btn" data-tab="tab2" data-i18n="services.tab2">Simulation</button>
+            <button class="tab-btn" data-tab="tab3" data-i18n="services.tab3">Prototyping</button>
+            <button class="tab-btn" data-tab="tab4" data-i18n="services.tab4">Beratung</button>
+            <button class="tab-btn" data-tab="tab5" data-i18n="services.tab5">IWE</button>
+        </div>
+        
+        <div class="tab-content active" id="tab1">
+            <h2 data-i18n="services.content1.title">Konstruktion und Entwicklung</h2>
+            <p data-i18n="services.content1.description">Unsere Ingenieure entwickeln präzise Konstruktionslösungen nach DIN- und ISO-Normen mit modernsten CAD-Systemen. Von der ersten Skizze bis zur fertigen technischen Zeichnung mit vollständiger Toleranzanalyse begleiten wir Ihr Projekt gemäß VDI 2221.</p>
+            <ul>
+                <li data-i18n="services.content1.item1">3D-CAD Konstruktion mit SolidWorks (nach VDI 2212), Inventor und CATIA V5</li>
+                <li data-i18n="services.content1.item2">Bauteil- und Baugruppenkonstruktion mit FEM-gerechter Modellierung</li>
+                <li data-i18n="services.content1.item3">Technische Dokumentation nach DIN 6789 und ISO 7200</li>
+                <li data-i18n="services.content1.item4">Toleranzanalysen nach GPS (Geometrische Produktspezifikation)</li>
+                <li data-i18n="services.content1.item5">Stücklistenmanagement mit ERP-Schnittstellen (SAP, ProAlpha)</li>
+                <li data-i18n="services.content1.item6">Schweißkonstruktionen nach DIN EN 1090 und DIN EN 15085</li>
+            </ul>
+        </div>
+        
+        <div class="tab-content" id="tab2">
+            <h2 data-i18n="services.content2.title">Simulation und Berechnung</h2>
+            <p data-i18n="services.content2.description">Mit FEM- und CFD-Simulationen nach VDI 2206 optimieren wir Ihre Konstruktionen virtuell. Wir führen statische und dynamische Analysen nach FKM-Richtlinie durch und validieren die Ergebnisse mit experimentellen Methoden (DIC, Dehnungsmessstreifen).</p>
+            <ul>
+                <li data-i18n="services.content2.item1">Statische und dynamische FEM-Analysen (ANSYS, Abaqus, Nastran)</li>
+                <li data-i18n="services.content2.item2">Thermische Simulationen mit nichtlinearen Materialmodellen</li>
+                <li data-i18n="services.content2.item3">Strömungssimulationen (CFD) für laminare und turbulente Strömungen</li>
+                <li data-i18n="services.content2.item4">Festigkeits- und Lebensdauerberechnungen nach FKM-Richtlinie</li>
+                <li data-i18n="services.content2.item5">Schwingungsanalysen mit Modal- und Spektralanalysen</li>
+                <li data-i18n="services.content2.item6">Multiphysik-Simulationen (thermomechanisch, fluid-strukturgekoppelt)</li>
+            </ul>
+        </div>
+        
+        <div class="tab-content" id="tab3">
+            <h2 data-i18n="services.content3.title">Prototyping und Testing</h2>
+            <p data-i18n="services.content3.description">Von 3D-Druck (Additive Fertigung nach VDI 3405) über CNC-gefertigte Funktionsmuster bis hin zu kleinen Serien realisieren wir Ihre Prototypen mit modernsten Fertigungsverfahren. Wir begleiten den gesamten Produktentstehungsprozess nach VDI 2221.</p>
+            <ul>
+                <li data-i18n="services.content3.item1">Rapid Prototyping (FDM, SLS, SLA nach ASTM F2792)</li>
+                <li data-i18n="services.content3.item2">CNC-Prototypenfertigung (5-Achs-Simultanbearbeitung)</li>
+                <li data-i18n="services.content3.item3">Funktionstests und Validierung nach VDI/VDE 2650</li>
+                <li data-i18n="services.content3.item4">Mess- und Prüftechnik (3D-Scannen nach VDI/VDE 2630, CMM)</li>
+                <li data-i18n="services.content3.item5">Kleinserienfertigung mit werkzeuglosen Umformverfahren</li>
+                <li data-i18n="services.content3.item6">Materialprüfung nach DIN EN ISO 6892-1 und ASTM E8</li>
+            </ul>
+        </div>
+        
+        <div class="tab-content" id="tab4">
+            <h2 data-i18n="services.content4.title">Technische Beratung</h2>
+            <p data-i18n="services.content4.description">Unsere Experten stehen Ihnen mit fundiertem Fachwissen zur Seite - von Materialauswahl nach Werkstoffdatenblättern über Fertigungsoptimierung nach Lean-Prinzipien bis hin zu Normen und Richtlinien (DIN, ISO, ASTM, ASME).</p>
+            <ul>
+                <li data-i18n="services.content4.item1">Fertigungsoptimierung mit Wertstromanalyse nach VDI 5200</li>
+                <li data-i18n="services.content4.item2">Materialberatung mit Zugversuchen nach DIN EN ISO 6892-1</li>
+                <li data-i18n="services.content4.item3">Normen und Richtlinien (DIN, ISO, ASTM, ASME, PED)</li>
+                <li data-i18n="services.content4.item4">Qualitätssicherung mit SPC nach ISO 7870</li>
+                <li data-i18n="services.content4.item5">Prozessoptimierung mit Six Sigma Methoden</li>
+                <li data-i18n="services.content4.item6">Risikoanalysen nach FMEA (VDI 2246) und FMECA</li>
+            </ul>
+        </div>
+        
+        <div class="tab-content" id="tab5">
+            <h2 data-i18n="services.content5.title">International Welding Engineer (IWE)</h2>
+            <p data-i18n="services.content5.description">Als zertifizierte International Welding Engineers nach IIW/EWF bieten wir umfassende Expertise in Schweißtechnik und Fügeverfahren gemäß DIN EN ISO 3834 und DIN EN 1090. Unsere Dienstleistungen umfassen die gesamte Prozesskette von der Konstruktion bis zur Qualitätssicherung.</p>
+            <ul>
+                <li data-i18n="services.content5.item1">Schweißtechnische Berechnungen nach DIN EN 1993-1-8 (Eurocode 3)</li>
+                <li data-i18n="services.content5.item2">Schweißnahtvorbereitung und -auslegung nach DIN EN ISO 2553</li>
+                <li data-i18n="services.content5.item3">WPS/PQR nach DIN EN ISO 15614 und DIN EN ISO 15609</li>
+                <li data-i18n="services.content5.item4">Zerstörungsfreie Prüfungen (VT, PT, MT, UT, RT nach DIN EN ISO 17635)</li>
+                <li data-i18n="services.content5.item5">Schweißaufsicht nach DIN EN ISO 14731</li>
+                <li data-i18n="services.content5.item6">Zertifizierung nach DIN EN 1090 und DIN EN 15085</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="team-section" id="team">
+        <div class="container">
+            <h2 class="section-title" data-i18n="team.title">Unser Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-img" style="background-image: url('/home/uni/Documents/Webpage-Ing/images/team1.jpg');"></div>
+                    <div class="member-info">
+                        <h3 class="member-name">Dr. Michael Bauer</h3>
+                        <span class="member-position" data-i18n="team.position1">Geschäftsführer / Senior Ingenieur</span>
+                        <p data-i18n="team.bio1">Maschinenbau (TU München), Promotion im Bereich Strömungsmechanik, 20+ Jahre Erfahrung in Konstruktion und Simulation.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-img" style="background-image: url('/home/uni/Documents/Webpage-Ing/images/team2.jpg');"></div>
+                    <div class="member-info">
+                        <h3 class="member-name">Sarah Meier</h3>
+                        <span class="member-position" data-i18n="team.position2">Projektleiterin</span>
+                        <p data-i18n="team.bio2">Dipl.-Ing. Maschinenbau (RWTH Aachen), Spezialistin für FEM-Simulationen und Leichtbaukonstruktionen, 10 Jahre Projekterfahrung.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-img" style="background-image: url('/home/uni/Documents/Webpage-Ing/images/team3.jpg');"></div>
+                    <div class="member-info">
+                        <h3 class="member-name">Thomas Weber</h3>
+                        <span class="member-position" data-i18n="team.position3">Konstrukteur</span>
+                        <p data-i18n="team.bio3">Staatl. gepr. Techniker Maschinenbau, CAD-Spezialist (SolidWorks, Inventor), Experte für technische Dokumentation und Fertigungsvorbereitung.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-img" style="background-image: url('/home/uni/Documents/Webpage-Ing/images/team4.jpg');"></div>
+                    <div class="member-info">
+                        <h3 class="member-name">Julia Schmidt</h3>
+                        <span class="member-position" data-i18n="team.position4">Technische Zeichnerin</span>
+                        <p data-i18n="team.bio4">Ausbildung zur Technischen Zeichnerin, Spezialistin für 2D/3D-Konstruktion, Verantwortlich für Normteilemanagement und Stücklisten.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="projects">
+        <h2 class="section-title" data-i18n="projects.title">Aktuelle Projekte</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img" style="background-image: url('/home/uni/Documents/Webpage-Ing/images/robo1.jpg');"></div>
+                <div class="project-info">
+                    <h3 class="project-title" data-i18n="projects.project1.title">Modulare Fertigungszelle</h3>
+                    <p data-i18n="projects.project1.description">Entwicklung einer flexiblen Fertigungszelle für die automatisierte Bearbeitung von Kleinbauteilen mit integrierter Qualitätskontrolle.</p>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="project-info">
+                    <h3 class="project-title" data-i18n="projects.project2.title">Strömungsoptimierte Pumpengehäuse</h3>
+                    <p data-i18n="projects.project2.description">CFD-optimierte Neukonstruktion von Hochleistungspumpengehäusen für die chemische Industrie mit 15% höherem Wirkungsgrad.</p>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="project-info">
+                    <h3 class="project-title" data-i18n="projects.project3.title">Leichtbau-Roboterarm</h3>
+                    <p data-i18n="projects.project3.description">Entwicklung eines carbonfaserverstärkten Roboterarms für die Lebensmittelindustrie mit 30% Gewichtsreduktion bei gleicher Tragkraft.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="news">
+        <h2 class="section-title" data-i18n="news.title">Aktuelles</h2>
+        <div class="news-item">
+            <div class="news-date">15. März 2023</div>
+            <h3 class="news-title" data-i18n="news.news1.title">BMEC erhält Innovationspreis für nachhaltige Konstruktionen</h3>
+            <p data-i18n="news.news1.description">Wir freuen uns, den "Green Engineering Award 2023" für unser Projekt zur Materialeinsparung in Serienbauteilen erhalten zu haben. Durch optimierte Konstruktionen konnten wir bei unseren Kunden jährlich über 50 Tonnen Stahl einsparen.</p>
+        </div>
+        
+        <div class="news-item">
+            <div class="news-date">2. Februar 2023</div>
+            <h3 class="news-title" data-i18n="news.news2.title">Neue Softwarelizenzen für erweiterte Simulationsmöglichkeiten</h3>
+            <p data-i18n="news.news2.description">Um unseren Kunden noch bessere Dienstleistungen anbieten zu können, haben wir unsere Softwarepalette erweitert. Ab sofort stehen uns ANSYS Mechanical Premium und Siemens Simcenter für komplexe Multiphysik-Simulationen zur Verfügung.</p>
+        </div>
+        
+        <div class="news-item">
+            <div class="news-date">10. Januar 2023</div>
+            <h3 class="news-title" data-i18n="news.news3.title">Erfolgreiche Zertifizierung nach DIN EN ISO 9001:2015</h3>
+            <p data-i18n="news.news3.description">Nach intensiver Vorbereitung hat BMEC die Zertifizierung nach DIN EN ISO 9001:2015 erfolgreich bestanden. Dies unterstreicht unser Engagement für qualitativ hochwertige Ingenieursdienstleistungen und kontinuierliche Verbesserung.</p>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section" id="booking">
+        <div class="container">
+            <h2 class="section-title" data-i18n="booking.title">Termin vereinbaren</h2>
+            
+            <div class="booking-container">
+                <div class="booking-header">
+                    <h3 data-i18n="booking.subtitle">Wählen Sie ein verfügbares Datum und eine Uhrzeit für Ihre Beratung</h3>
+                </div>
+                
+                <div class="month-navigation">
+                    <button id="prev-month" data-i18n="booking.prev">Vorheriger Monat</button>
+                    <h4 id="current-month">Mai 2023</h4>
+                    <button id="next-month" data-i18n="booking.next">Nächster Monat</button>
+                </div>
+                
+                <div class="booking-calendar" id="calendar">
+                    <!-- Wochentage Header -->
+                    <div class="calendar-header" data-i18n="booking.day0">Mo</div>
+                    <div class="calendar-header" data-i18n="booking.day1">Di</div>
+                    <div class="calendar-header" data-i18n="booking.day2">Mi</div>
+                    <div class="calendar-header" data-i18n="booking.day3">Do</div>
+                    <div class="calendar-header" data-i18n="booking.day4">Fr</div>
+                    <div class="calendar-header" data-i18n="booking.day5">Sa</div>
+                    <div class="calendar-header" data-i18n="booking.day6">So</div>
+                    
+                    <!-- Kalendertage werden via JavaScript eingefügt -->
+                </div>
+                
+                <div class="time-selection">
+                    <h4 data-i18n="booking.time">Verfügbare Uhrzeiten:</h4>
+                    <div class="time-slots" id="time-slots">
+                        <!-- Zeitfenster werden via JavaScript eingefügt -->
+                    </div>
+                </div>
+                
+                <div class="booking-form">
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label for="booking-name" data-i18n="booking.form.name">Name</label>
+                            <input type="text" id="booking-name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="booking-email" data-i18n="booking.form.email">E-Mail</label>
+                            <input type="email" id="booking-email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="booking-phone" data-i18n="booking.form.phone">Telefon</label>
+                            <input type="tel" id="booking-phone" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="booking-notes" data-i18n="booking.form.notes">Anmerkungen</label>
+                            <textarea id="booking-notes" class="form-control" rows="3"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" data-i18n="booking.form.submit">Termin buchen</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact.title">Kontaktieren Sie uns</h2>
+            
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name" data-i18n="contact.form.name">Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" data-i18n="contact.form.email">E-Mail</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" data-i18n="contact.form.phone">Telefon (optional)</label>
+                        <input type="tel" id="phone" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" data-i18n="contact.form.subject">Betreff</label>
+                        <input type="text" id="subject" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" data-i18n="contact.form.message">Ihre Nachricht</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="privacy" required> 
+                            <span data-i18n="contact.form.privacy">Ich habe die Datenschutzerklärung gelesen und akzeptiere sie.</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn" data-i18n="contact.form.button">Nachricht senden</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>BMEC Engineering</h3>
+                    <p data-i18n="footer.about">Innovative Maschinenbaulösungen seit 2005. Unser kleines, spezialisiertes Team entwickelt maßgeschneiderte technische Lösungen für Industrie und Produktion.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-i18n="footer.contact">Kontakt</h3>
+                    <ul>
+                        <li>BMEC Engineering GmbH</li>
+                        <li data-i18n="footer.address1">Technologiepark 15</li>
+                        <li data-i18n="footer.address2">86159 Augsburg</li>
+                        <li data-i18n="footer.phone">Tel: +49 821 1234567</li>
+                        <li>Email: info@bmec-engineering.de</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-i18n="footer.links">Links</h3>
+                    <ul>
+                        <li><a href="#home" data-i18n="nav.home">Startseite</a></li>
+                        <li><a href="#team" data-i18n="nav.team">Team</a></li>
+                        <li><a href="#services" data-i18n="nav.services">Leistungen</a></li>
+                        <li><a href="#projects" data-i18n="nav.projects">Projekte</a></li>
+                        <li><a href="#news" data-i18n="nav.news">News</a></li>
+                        <li><a href="#booking" data-i18n="nav.booking">Termin buchen</a></li>
+                        <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-i18n="footer.legal">Rechtliches</h3>
+                    <ul>
+                        <li><a href="#impressum" data-i18n="footer.legal1">Impressum</a></li>
+                        <li><a href="#datenschutz" data-i18n="footer.legal2">Datenschutz</a></li>
+                        <li><a href="#agb" data-i18n="footer.legal3">AGB</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 BMEC Engineering GmbH. <span data-i18n="footer.rights">Alle Rechte vorbehalten.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="news-ticker">
+        <div class="container ticker-container">
+            <div class="ticker-content">
+                <span data-i18n="ticker.item1">🚀 Neues Projekt: Entwicklung einer automatisierten Montagelinie für die Automobilindustrie</span>
+                <span data-i18n="ticker.item2">🏆 Auszeichnung: BMEC erhält Innovationspreis 2023</span>
+                <span data-i18n="ticker.item3">📅 Veranstaltung: Besuchen Sie uns auf der Hannover Messe vom 17.-21. April</span>
+                <span data-i18n="ticker.item4">🔧 Stellenangebot: Wir suchen Verstärkung im Bereich Konstruktion (m/w/d)</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
