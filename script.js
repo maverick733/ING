@@ -6,21 +6,30 @@ const translations = {
         "nav.team": "Team",
         "nav.services": "Leistungen",
         "nav.projects": "Projekte",
+        "nav.roadmap": "Roadmap",
         "nav.news": "News",
-        "nav.booking": "Termin buchen",
         "nav.contact": "Kontakt",
         
         // Hero section
         "hero.title": "Innovative Maschinenbaulösungen",
         "hero.description": "Wir entwickeln maßgeschneiderte technische Lösungen für Industrie und Produktion. Unser erfahrenes Team steht für Präzision, Innovation und Zuverlässigkeit.",
-        "hero.button": "Termin buchen",
+        "hero.title2": "Technische Exzellenz",
+        "hero.description2": "Hochpräzise Engineering-Lösungen für anspruchsvolle industrielle Anwendungen.",
+        "hero.title3": "Zukunftsorientierte Technologien",
+        "hero.description3": "Innovationen, die Ihre Produktion auf das nächste Level bringen.",
         
         // Services
+        "services.title": "Unsere Leistungen",
         "services.tab1": "Konstruktion",
+        "services.tab1.short": "Präzise Konstruktionslösungen nach DIN- und ISO-Normen",
         "services.tab2": "Simulation",
+        "services.tab2.short": "FEM- und CFD-Simulationen nach VDI 2206",
         "services.tab3": "Prototyping",
+        "services.tab3.short": "Moderne Fertigungsverfahren für Prototypen",
         "services.tab4": "Beratung",
+        "services.tab4.short": "Fundiertes Fachwissen für Ihre Projekte",
         "services.tab5": "IWE",
+        "services.tab5.short": "Schweißtechnik und Fügeverfahren",
         
         "services.content1.title": "Konstruktion und Entwicklung",
         "services.content1.description": "Unsere Ingenieure entwickeln präzise Konstruktionslösungen nach DIN- und ISO-Normen mit modernsten CAD-Systemen. Von der ersten Skizze bis zur fertigen technischen Zeichnung mit vollständiger Toleranzanalyse begleiten wir Ihr Projekt gemäß VDI 2221.",
@@ -68,15 +77,12 @@ const translations = {
         "services.content5.item6": "Zertifizierung nach DIN EN 1090 und DIN EN 15085",
 
         // Team
-        "team.title": "Unser Team",
-        "team.position1": "Geschäftsführer / Senior Ingenieur",
-        "team.bio1": "Maschinenbau (TU München), Promotion im Bereich Strömungsmechanik, 20+ Jahre Erfahrung in Konstruktion und Simulation.",
-        "team.position2": "Projektleiterin",
-        "team.bio2": "Dipl.-Ing. Maschinenbau (RWTH Aachen), Spezialistin für FEM-Simulationen und Leichtbaukonstruktionen, 10 Jahre Projekterfahrung.",
-        "team.position3": "Konstrukteur",
-        "team.bio3": "Staatl. gepr. Techniker Maschinenbau, CAD-Spezialist (SolidWorks, Inventor), Experte für technische Dokumentation und Fertigungsvorbereitung.",
-        "team.position4": "Technische Zeichnerin",
-        "team.bio4": "Ausbildung zur Technischen Zeichnerin, Spezialistin für 2D/3D-Konstruktion, Verantwortlich für Normteilemanagement und Stücklisten.",
+        "team.title": "Unser Expertenteam",
+        "team.description": "Unser interdisziplinäres Team aus erfahrenen Ingenieuren, Konstrukteuren und Technikern steht für höchste Fachkompetenz und innovative Lösungen. Mit jahrzehntelanger Erfahrung in verschiedenen Branchen entwickeln wir maßgeschneiderte Lösungen für Ihre technischen Herausforderungen.",
+        "team.stat1": "Jahre Erfahrung",
+        "team.stat2": "Abgeschlossene Projekte",
+        "team.stat3": "Branchen",
+        "team.stat4": "Kundenzufriedenheit",
         
         // Projects
         "projects.title": "Aktuelle Projekte",
@@ -86,6 +92,25 @@ const translations = {
         "projects.project2.description": "CFD-optimierte Neukonstruktion von Hochleistungspumpengehäusen für die chemische Industrie mit 15% höherem Wirkungsgrad.",
         "projects.project3.title": "Leichtbau-Roboterarm",
         "projects.project3.description": "Entwicklung eines carbonfaserverstärkten Roboterarms für die Lebensmittelindustrie mit 30% Gewichtsreduktion bei gleicher Tragkraft.",
+        "projects.project4.title": "Industrie 4.0 Steuerung",
+        "projects.project4.description": "Entwicklung einer intelligenten Steuerung für vernetzte Produktionsanlagen mit Echtzeit-Monitoring.",
+        "projects.project5.title": "Energieeffiziente Antriebe",
+        "projects.project5.description": "Optimierung von Antriebssystemen für 20% höhere Energieeffizienz bei gleichbleibender Leistung.",
+        "projects.project6.title": "Medizintechnik Komponenten",
+        "projects.project6.description": "Entwicklung sterilisierbarer Hochpräzisionskomponenten für medizinische Geräte nach ISO 13485.",
+        
+        // Roadmap
+        "roadmap.title": "Technologie-Roadmap",
+        "roadmap.item1.title": "Q1 2023",
+        "roadmap.item1.text": "Einführung erweiterter Multiphysik-Simulationen",
+        "roadmap.item2.title": "Q2 2023",
+        "roadmap.item2.text": "Integration von KI-basierten Optimierungsalgorithmen",
+        "roadmap.item3.title": "Q3 2023",
+        "roadmap.item3.text": "Erweiterung der Additiven Fertigungskapazitäten",
+        "roadmap.item4.title": "Q4 2023",
+        "roadmap.item4.text": "Digitaler Zwilling für Produktionsanlagen",
+        "roadmap.item5.title": "2024",
+        "roadmap.item5.text": "Nachhaltige Materialinnovationen und Kreislaufwirtschaft",
         
         // News
         "news.title": "Aktuelles",
@@ -106,28 +131,8 @@ const translations = {
         "contact.form.privacy": "Ich habe die Datenschutzerklärung gelesen und akzeptiere sie.",
         "contact.form.button": "Nachricht senden",
         
-        // Booking
-        "booking.title": "Termin vereinbaren",
-        "booking.subtitle": "Wählen Sie ein verfügbares Datum und eine Uhrzeit für Ihre Beratung",
-        "booking.prev": "Vorheriger Monat",
-        "booking.next": "Nächster Monat",
-        "booking.day0": "Mo",
-        "booking.day1": "Di",
-        "booking.day2": "Mi",
-        "booking.day3": "Do",
-        "booking.day4": "Fr",
-        "booking.day5": "Sa",
-        "booking.day6": "So",
-        "booking.time": "Verfügbare Uhrzeiten:",
-        "booking.form.name": "Name",
-        "booking.form.email": "E-Mail",
-        "booking.form.phone": "Telefon",
-        "booking.form.notes": "Anmerkungen",
-        "booking.form.submit": "Termin buchen",
-        "booking.success": "Vielen Dank! Ihr Termin wurde erfolgreich gebucht.",
-        
         // Footer
-        "footer.about": "Innovative Maschinenbaulösungen seit 2005. Unser kleines, spezialisiertes Team entwickelt maßgeschneiderte technische Lösungen für Industrie und Produktion.",
+        "footer.about": "Innovative Maschinenbaulösungen seit 2005. Unser spezialisiertes Team entwickelt maßgeschneiderte technische Lösungen für Industrie und Produktion.",
         "footer.contact": "Kontakt",
         "footer.address1": "Technologiepark 15",
         "footer.address2": "86159 Augsburg",
@@ -151,21 +156,30 @@ const translations = {
         "nav.team": "Team",
         "nav.services": "Services",
         "nav.projects": "Projects",
+        "nav.roadmap": "Roadmap",
         "nav.news": "News",
-        "nav.booking": "Book Appointment",
         "nav.contact": "Contact",
         
         // Hero section
         "hero.title": "Innovative Engineering Solutions",
         "hero.description": "We develop customized technical solutions for industry and production. Our experienced team stands for precision, innovation and reliability.",
-        "hero.button": "Book Appointment",
+        "hero.title2": "Technical Excellence",
+        "hero.description2": "High-precision engineering solutions for demanding industrial applications.",
+        "hero.title3": "Future-Oriented Technologies",
+        "hero.description3": "Innovations that take your production to the next level.",
         
         // Services
+        "services.title": "Our Services",
         "services.tab1": "Construction",
+        "services.tab1.short": "Precise construction solutions according to DIN and ISO standards",
         "services.tab2": "Simulation",
+        "services.tab2.short": "FEM and CFD simulations according to VDI 2206",
         "services.tab3": "Prototyping",
+        "services.tab3.short": "Modern manufacturing processes for prototypes",
         "services.tab4": "Consulting",
+        "services.tab4.short": "Expert knowledge for your projects",
         "services.tab5": "IWE",
+        "services.tab5.short": "Welding technology and joining processes",
         
         "services.content1.title": "Construction and Development",
         "services.content1.description": "Our engineers develop precise construction solutions with state-of-the-art CAD systems. From the first sketch to the finished technical drawing, we accompany your project.",
@@ -191,24 +205,13 @@ const translations = {
         "services.content3.item4": "Measurement and testing technology",
         "services.content3.item5": "Small series production",
         
-        "services.content4.title": "Technical Consulting",
-        "services.content4.description": "Our experts are at your side with sound specialist knowledge - from material selection to production optimization to standards and guidelines.",
-        "services.content4.item1": "Production optimization",
-        "services.content4.item2": "Material consulting",
-        "services.content4.item3": "Standards and guidelines",
-        "services.content4.item4": "Quality assurance",
-        "services.content4.item5": "Process optimization",
-        
         // Team
-        "team.title": "Our Team",
-        "team.position1": "Managing Director / Senior Engineer",
-        "team.bio1": "Mechanical engineering (TU Munich), PhD in fluid mechanics, 20+ years of experience in construction and simulation.",
-        "team.position2": "Project Manager",
-        "team.bio2": "Dipl.-Ing. Mechanical Engineering (RWTH Aachen), specialist for FEM simulations and lightweight constructions, 10 years of project experience.",
-        "team.position3": "Design Engineer",
-        "team.bio3": "State-certified mechanical engineering technician, CAD specialist (SolidWorks, Inventor), expert for technical documentation and production preparation.",
-        "team.position4": "Technical Draftswoman",
-        "team.bio4": "Training as a technical draftswoman, specialist for 2D/3D construction, responsible for standard parts management and parts lists.",
+        "team.title": "Our Expert Team",
+        "team.description": "Our interdisciplinary team of experienced engineers, designers and technicians stands for the highest expertise and innovative solutions. With decades of experience in various industries, we develop customized solutions for your technical challenges.",
+        "team.stat1": "Years of Experience",
+        "team.stat2": "Completed Projects",
+        "team.stat3": "Industries",
+        "team.stat4": "Customer Satisfaction",
         
         // Projects
         "projects.title": "Current Projects",
@@ -218,6 +221,25 @@ const translations = {
         "projects.project2.description": "CFD-optimized redesign of high-performance pump housings for the chemical industry with 15% higher efficiency.",
         "projects.project3.title": "Lightweight Robot Arm",
         "projects.project3.description": "Development of a carbon fiber reinforced robot arm for the food industry with 30% weight reduction at the same load capacity.",
+        "projects.project4.title": "Industry 4.0 Control System",
+        "projects.project4.description": "Development of an intelligent control system for networked production plants with real-time monitoring.",
+        "projects.project5.title": "Energy-Efficient Drives",
+        "projects.project5.description": "Optimization of drive systems for 20% higher energy efficiency with the same performance.",
+        "projects.project6.title": "Medical Technology Components",
+        "projects.project6.description": "Development of sterilizable high-precision components for medical devices according to ISO 13485.",
+        
+        // Roadmap
+        "roadmap.title": "Technology Roadmap",
+        "roadmap.item1.title": "Q1 2023",
+        "roadmap.item1.text": "Introduction of extended multiphysics simulations",
+        "roadmap.item2.title": "Q2 2023",
+        "roadmap.item2.text": "Integration of AI-based optimization algorithms",
+        "roadmap.item3.title": "Q3 2023",
+        "roadmap.item3.text": "Expansion of additive manufacturing capacities",
+        "roadmap.item4.title": "Q4 2023",
+        "roadmap.item4.text": "Digital twin for production plants",
+        "roadmap.item5.title": "2024",
+        "roadmap.item5.text": "Sustainable material innovations and circular economy",
         
         // News
         "news.title": "News",
@@ -238,28 +260,8 @@ const translations = {
         "contact.form.privacy": "I have read and accept the privacy policy.",
         "contact.form.button": "Send message",
         
-        // Booking
-        "booking.title": "Book an Appointment",
-        "booking.subtitle": "Choose an available date and time for your consultation",
-        "booking.prev": "Previous Month",
-        "booking.next": "Next Month",
-        "booking.day0": "Mon",
-        "booking.day1": "Tue",
-        "booking.day2": "Wed",
-        "booking.day3": "Thu",
-        "booking.day4": "Fri",
-        "booking.day5": "Sat",
-        "booking.day6": "Sun",
-        "booking.time": "Available Times:",
-        "booking.form.name": "Name",
-        "booking.form.email": "Email",
-        "booking.form.phone": "Phone",
-        "booking.form.notes": "Notes",
-        "booking.form.submit": "Book Appointment",
-        "booking.success": "Thank you! Your appointment has been successfully booked.",
-        
         // Footer
-        "footer.about": "Innovative engineering solutions since 2005. Our small, specialized team develops customized technical solutions for industry and production.",
+        "footer.about": "Innovative engineering solutions since 2005. Our specialized team develops customized technical solutions for industry and production.",
         "footer.contact": "Contact",
         "footer.address1": "Technology Park 15",
         "footer.address2": "86159 Augsburg",
@@ -314,18 +316,23 @@ languageBtns.forEach(btn => {
     });
 });
 
-// Tab functionality
-const tabBtns = document.querySelectorAll('.tab-btn');
+// Service cards functionality
+const serviceCards = document.querySelectorAll('.service-card');
 const tabContents = document.querySelectorAll('.tab-content');
 
-tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        tabBtns.forEach(btn => btn.classList.remove('active'));
+serviceCards.forEach(card => {
+    card.addEventListener('click', () => {
+        serviceCards.forEach(c => c.classList.remove('active'));
         tabContents.forEach(content => content.classList.remove('active'));
         
-        btn.classList.add('active');
-        const tabId = btn.getAttribute('data-tab');
+        card.classList.add('active');
+        const tabId = card.getAttribute('data-tab');
         document.getElementById(tabId).classList.add('active');
+        
+        // Smooth scroll to content
+        document.getElementById(tabId).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 });
 
@@ -387,145 +394,75 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Calendar functionality
+// Image Slider
 document.addEventListener('DOMContentLoaded', function() {
-    let currentDate = new Date();
-    let selectedDate = null;
-    let selectedTime = null;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentSlide = 0;
+    let slideInterval;
 
-    function renderCalendar() {
-        const calendarEl = document.getElementById('calendar');
-        const monthYearEl = document.getElementById('current-month');
+    function showSlide(n) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
         
-        // Show month and year
-        const monthNames = ["January", "February", "March", "April", "May", "June",
-                           "July", "August", "September", "October", "November", "December"];
-        monthYearEl.textContent = `${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}`;
-        
-        // Generate calendar days
-        const firstDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
-        const lastDay = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
-        
-        // Weekday of first day (0-6, Sunday=0)
-        let firstDayIndex = firstDay.getDay() === 0 ? 6 : firstDay.getDay() - 1;
-        
-        // Empty cells for days from previous month
-        for (let i = 0; i < firstDayIndex; i++) {
-            const dayEl = document.createElement('div');
-            dayEl.className = 'calendar-day disabled';
-            dayEl.textContent = '';
-            calendarEl.appendChild(dayEl);
-        }
-        
-        // Days of current month
-        for (let i = 1; i <= lastDay.getDate(); i++) {
-            const dayEl = document.createElement('div');
-            dayEl.className = 'calendar-day';
-            dayEl.textContent = i;
-            
-            // Check if day is in the future
-            const dayDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), i);
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
-            
-            if (dayDate < today) {
-                dayEl.classList.add('disabled');
-            } else {
-                dayEl.addEventListener('click', function() {
-                    // Remove previous selection
-                    document.querySelectorAll('.calendar-day.selected').forEach(el => {
-                        el.classList.remove('selected');
-                    });
-                    
-                    // Set new selection
-                    this.classList.add('selected');
-                    selectedDate = dayDate;
-                    
-                    // Show available times
-                    renderTimeSlots();
-                });
-            }
-            
-            calendarEl.appendChild(dayEl);
-        }
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
     }
-    
-    function renderTimeSlots() {
-        if (!selectedDate) return;
-        
-        const timeSlotsEl = document.getElementById('time-slots');
-        timeSlotsEl.innerHTML = '';
-        
-        // Available times (example)
-        const availableTimes = [
-            '09:00', '10:00', '11:00', '14:00', '15:00', '16:00'
-        ];
-        
-        availableTimes.forEach(time => {
-            const timeEl = document.createElement('div');
-            timeEl.className = 'time-slot';
-            timeEl.textContent = time;
-            
-            timeEl.addEventListener('click', function() {
-                // Remove previous selection
-                document.querySelectorAll('.time-slot.selected').forEach(el => {
-                    el.classList.remove('selected');
-                });
-                
-                // Set new selection
-                this.classList.add('selected');
-                selectedTime = time;
-            });
-            
-            timeSlotsEl.appendChild(timeEl);
-        });
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
     }
-    
-    // Month navigation
-    document.getElementById('prev-month').addEventListener('click', function() {
-        currentDate.setMonth(currentDate.getMonth() - 1);
-        document.getElementById('calendar').innerHTML = '';
-        renderCalendar();
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    function startSlider() {
+        slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function stopSlider() {
+        clearInterval(slideInterval);
+    }
+
+    // Initialize slider
+    showSlide(0);
+    startSlider();
+
+    // Event listeners
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        stopSlider();
+        startSlider();
     });
-    
-    document.getElementById('next-month').addEventListener('click', function() {
-        currentDate.setMonth(currentDate.getMonth() + 1);
-        document.getElementById('calendar').innerHTML = '';
-        renderCalendar();
+
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        stopSlider();
+        startSlider();
     });
-    
-    // Booking form
-    document.getElementById('bookingForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        if (!selectedDate || !selectedTime) {
-            alert(currentLang === 'de' ? 'Bitte wählen Sie ein Datum und eine Uhrzeit aus.' : 'Please select a date and time.');
-            return;
-        }
-        
-        // Here the booking would normally be sent to the server
-        const bookingData = {
-            name: document.getElementById('booking-name').value,
-            email: document.getElementById('booking-email').value,
-            phone: document.getElementById('booking-phone').value,
-            date: selectedDate,
-            time: selectedTime,
-            notes: document.getElementById('booking-notes').value
-        };
-        
-        console.log('Booking data:', bookingData);
-        alert(translations[currentLang]['booking.success']);
-        this.reset();
-        
-        // Reset selection
-        document.querySelectorAll('.calendar-day.selected, .time-slot.selected').forEach(el => {
-            el.classList.remove('selected');
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
+            stopSlider();
+            startSlider();
         });
-        selectedDate = null;
-        selectedTime = null;
-        document.getElementById('time-slots').innerHTML = '';
     });
-    
-    // Initial calendar render
-    renderCalendar();
+
+    // Pause on hover
+    const slider = document.querySelector('.slider-container');
+    slider.addEventListener('mouseenter', stopSlider);
+    slider.addEventListener('mouseleave', startSlider);
+});
+
+// Initialize news ticker immediately
+document.addEventListener('DOMContentLoaded', function() {
+    const tickerContent = document.querySelector('.ticker-content');
+    if (tickerContent) {
+        tickerContent.style.animation = 'ticker 30s linear infinite';
+    }
 });
