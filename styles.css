@@ -20,13 +20,18 @@
 body {
     color: var(--text-color);
     line-height: 1.6;
-    padding-top: 70px;
-    padding-bottom: 40px;
     background-color: #f9f9f9;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
 header {
-    background-color: rgba(3, 57, 108, 0.9);
+    background-color: var(--secondary-color);
     color: var(--light-text);
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -36,13 +41,11 @@ header {
     z-index: 1000;
     display: flex;
     align-items: center;
-    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+.header-hidden {
+    transform: translateY(-100%);
 }
 
 .header-content {
@@ -142,13 +145,46 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
+/* Anchor Navigation */
+.anchor-nav {
+    background-color: var(--primary-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    margin-top: 80px; /* Header height */
+}
+
+.anchor-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.anchor-nav li {
+    margin: 0 15px;
+}
+
+.anchor-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.anchor-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 /* Hero Slider */
 .hero-slider {
-    margin-top: -70px;
-    padding-top: 70px;
+    margin-top: 80px; /* Header height */
     position: relative;
-    height: 80vh;
-    max-height: 800px;
+    height: 70vh;
+    max-height: 700px;
     overflow: hidden;
 }
 
@@ -346,31 +382,64 @@ nav ul li a:hover {
     color: var(--text-color);
 }
 
-.tab-content {
+/* Service Modal */
+.service-modal {
     display: none;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    animation: fadeIn 0.5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    overflow-y: auto;
 }
 
-.tab-content.active {
+.service-modal.active {
     display: block;
 }
 
-.content-wrapper {
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    animation: modalFadeIn 0.3s;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--primary-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.close-modal:hover {
+    background-color: var(--light-color);
+    color: var(--secondary-color);
+}
+
+.modal-wrapper {
     display: flex;
     flex-wrap: wrap;
 }
 
-.content-text {
-    flex: 1;
-    min-width: 300px;
-    padding: 2rem;
-}
-
-.content-image {
+.modal-image {
     flex: 1;
     min-width: 300px;
     height: 400px;
@@ -378,13 +447,19 @@ nav ul li a:hover {
     background-position: center;
 }
 
-.content-image img {
+.modal-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.content-text h2 {
+.modal-text {
+    flex: 1;
+    min-width: 300px;
+    padding: 2rem;
+}
+
+.modal-text h2 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     color: var(--primary-color);
@@ -392,7 +467,7 @@ nav ul li a:hover {
     padding-bottom: 10px;
 }
 
-.content-text h2::after {
+.modal-text h2::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -402,33 +477,33 @@ nav ul li a:hover {
     background-color: var(--highlight-color);
 }
 
-.content-text p {
+.modal-text p {
     margin-bottom: 1.5rem;
     line-height: 1.8;
 }
 
-.content-text ul {
+.modal-text ul {
     margin-bottom: 1.5rem;
     padding-left: 1.5rem;
 }
 
-.content-text li {
+.modal-text li {
     margin-bottom: 0.8rem;
     position: relative;
     list-style-type: none;
     padding-left: 1.5rem;
 }
 
-.content-text li::before {
+.modal-text li::before {
     content: '→';
     position: absolute;
     left: 0;
     color: var(--highlight-color);
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Team Section */
@@ -546,75 +621,45 @@ nav ul li a:hover {
     color: white;
 }
 
-.roadmap-container {
-    position: relative;
+.compact-roadmap {
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 20px;
-}
-
-.roadmap-line {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 100%;
-    background-color: var(--highlight-color);
-}
-
-.roadmap-items {
-    position: relative;
-    padding: 40px 0;
 }
 
 .roadmap-item {
-    position: relative;
-    margin-bottom: 40px;
-    width: 100%;
     display: flex;
-    justify-content: flex-end;
-    padding-right: 50%;
-    text-align: right;
-}
-
-.roadmap-item:nth-child(even) {
-    justify-content: flex-start;
-    padding-right: 0;
-    padding-left: 50%;
-    text-align: left;
-}
-
-.roadmap-dot {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: var(--highlight-color);
-    border: 4px solid var(--dark-bg);
-    z-index: 1;
-}
-
-.roadmap-content {
+    margin-bottom: 20px;
     background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 350px;
+    border-radius: 8px;
+    overflow: hidden;
     transition: all 0.3s;
 }
 
-.roadmap-item:hover .roadmap-content {
+.roadmap-item:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-5px);
+    transform: translateX(5px);
+}
+
+.roadmap-date {
+    min-width: 100px;
+    background-color: var(--highlight-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.roadmap-content {
+    padding: 15px 20px;
+    flex-grow: 1;
 }
 
 .roadmap-content h3 {
     color: var(--highlight-color);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
 }
 
 /* News Section */
@@ -642,14 +687,42 @@ nav ul li a:hover {
     color: var(--primary-color);
 }
 
-/* Contact Form */
+/* Contact Section */
+.contact-section {
+    padding: 5rem 0;
+    background-color: var(--gray-bg);
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 .contact-form {
-    max-width: 600px;
-    margin: 0 auto;
+    flex: 1;
+    min-width: 300px;
     padding: 2rem;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-image {
+    flex: 1;
+    min-width: 300px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 2rem;
+}
+
+.contact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .form-group {
@@ -800,14 +873,18 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
-    .content-wrapper {
+    .modal-wrapper {
         flex-direction: column;
     }
     
-    .content-image {
+    .modal-image {
         order: -1;
         height: 300px;
-        margin-bottom: 2rem;
+    }
+
+    .contact-image {
+        margin-left: 0;
+        margin-top: 2rem;
     }
 }
 
@@ -870,21 +947,15 @@ footer {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
-    .roadmap-item, 
-    .roadmap-item:nth-child(even) {
+
+    .anchor-nav ul {
         justify-content: flex-start;
-        padding-right: 0;
-        padding-left: 30px;
-        text-align: left;
+        overflow-x: auto;
+        padding-bottom: 10px;
     }
-    
-    .roadmap-line {
-        left: 10px;
-    }
-    
-    .roadmap-dot {
-        left: 10px;
+
+    .anchor-nav li {
+        margin: 0 10px;
     }
 }
 
@@ -921,5 +992,14 @@ footer {
     
     .section-title {
         font-size: 2rem;
+    }
+
+    .roadmap-item {
+        flex-direction: column;
+    }
+
+    .roadmap-date {
+        min-width: 100%;
+        padding: 10px;
     }
 }

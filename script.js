@@ -92,25 +92,19 @@ const translations = {
         "projects.project2.description": "CFD-optimierte Neukonstruktion von Hochleistungspumpengehäusen für die chemische Industrie mit 15% höherem Wirkungsgrad.",
         "projects.project3.title": "Leichtbau-Roboterarm",
         "projects.project3.description": "Entwicklung eines carbonfaserverstärkten Roboterarms für die Lebensmittelindustrie mit 30% Gewichtsreduktion bei gleicher Tragkraft.",
-        "projects.project4.title": "Industrie 4.0 Steuerung",
-        "projects.project4.description": "Entwicklung einer intelligenten Steuerung für vernetzte Produktionsanlagen mit Echtzeit-Monitoring.",
-        "projects.project5.title": "Energieeffiziente Antriebe",
-        "projects.project5.description": "Optimierung von Antriebssystemen für 20% höhere Energieeffizienz bei gleichbleibender Leistung.",
-        "projects.project6.title": "Medizintechnik Komponenten",
-        "projects.project6.description": "Entwicklung sterilisierbarer Hochpräzisionskomponenten für medizinische Geräte nach ISO 13485.",
         
         // Roadmap
         "roadmap.title": "Technologie-Roadmap",
-        "roadmap.item1.title": "Q1 2023",
-        "roadmap.item1.text": "Einführung erweiterter Multiphysik-Simulationen",
-        "roadmap.item2.title": "Q2 2023",
-        "roadmap.item2.text": "Integration von KI-basierten Optimierungsalgorithmen",
-        "roadmap.item3.title": "Q3 2023",
-        "roadmap.item3.text": "Erweiterung der Additiven Fertigungskapazitäten",
-        "roadmap.item4.title": "Q4 2023",
-        "roadmap.item4.text": "Digitaler Zwilling für Produktionsanlagen",
-        "roadmap.item5.title": "2024",
-        "roadmap.item5.text": "Nachhaltige Materialinnovationen und Kreislaufwirtschaft",
+        "roadmap.item1.title": "Multiphysik-Simulationen",
+        "roadmap.item1.text": "Einführung erweiterter Simulationsmöglichkeiten",
+        "roadmap.item2.title": "KI-Optimierung",
+        "roadmap.item2.text": "Integration von KI-basierten Algorithmen",
+        "roadmap.item3.title": "Additive Fertigung",
+        "roadmap.item3.text": "Erweiterung der Fertigungskapazitäten",
+        "roadmap.item4.title": "Digitaler Zwilling",
+        "roadmap.item4.text": "Für Produktionsanlagen",
+        "roadmap.item5.title": "Nachhaltigkeit",
+        "roadmap.item5.text": "Materialinnovationen und Kreislaufwirtschaft",
         
         // News
         "news.title": "Aktuelles",
@@ -118,8 +112,6 @@ const translations = {
         "news.news1.description": "Wir freuen uns, den \"Green Engineering Award 2023\" für unser Projekt zur Materialeinsparung in Serienbauteilen erhalten zu haben. Durch optimierte Konstruktionen konnten wir bei unseren Kunden jährlich über 50 Tonnen Stahl einsparen.",
         "news.news2.title": "Neue Softwarelizenzen für erweiterte Simulationsmöglichkeiten",
         "news.news2.description": "Um unseren Kunden noch bessere Dienstleistungen anbieten zu können, haben wir unsere Softwarepalette erweitert. Ab sofort stehen uns ANSYS Mechanical Premium und Siemens Simcenter für komplexe Multiphysik-Simulationen zur Verfügung.",
-        "news.news3.title": "Erfolgreiche Zertifizierung nach DIN EN ISO 9001:2015",
-        "news.news3.description": "Nach intensiver Vorbereitung hat BMEC die Zertifizierung nach DIN EN ISO 9001:2015 erfolgreich bestanden. Dies unterstreicht unser Engagement für qualitativ hochwertige Ingenieursdienstleistungen und kontinuierliche Verbesserung.",
         
         // Contact
         "contact.title": "Kontaktieren Sie uns",
@@ -197,14 +189,6 @@ const translations = {
         "services.content2.item4": "Strength and lifetime calculations",
         "services.content2.item5": "Vibration analyses",
         
-        "services.content3.title": "Prototyping and Testing",
-        "services.content3.description": "From 3D printing to CNC-manufactured functional models to small series - we realize your prototypes with the most modern manufacturing processes.",
-        "services.content3.item1": "Rapid prototyping (3D printing)",
-        "services.content3.item2": "CNC prototype manufacturing",
-        "services.content3.item3": "Function tests and validation",
-        "services.content3.item4": "Measurement and testing technology",
-        "services.content3.item5": "Small series production",
-        
         // Team
         "team.title": "Our Expert Team",
         "team.description": "Our interdisciplinary team of experienced engineers, designers and technicians stands for the highest expertise and innovative solutions. With decades of experience in various industries, we develop customized solutions for your technical challenges.",
@@ -221,25 +205,19 @@ const translations = {
         "projects.project2.description": "CFD-optimized redesign of high-performance pump housings for the chemical industry with 15% higher efficiency.",
         "projects.project3.title": "Lightweight Robot Arm",
         "projects.project3.description": "Development of a carbon fiber reinforced robot arm for the food industry with 30% weight reduction at the same load capacity.",
-        "projects.project4.title": "Industry 4.0 Control System",
-        "projects.project4.description": "Development of an intelligent control system for networked production plants with real-time monitoring.",
-        "projects.project5.title": "Energy-Efficient Drives",
-        "projects.project5.description": "Optimization of drive systems for 20% higher energy efficiency with the same performance.",
-        "projects.project6.title": "Medical Technology Components",
-        "projects.project6.description": "Development of sterilizable high-precision components for medical devices according to ISO 13485.",
         
         // Roadmap
         "roadmap.title": "Technology Roadmap",
-        "roadmap.item1.title": "Q1 2023",
-        "roadmap.item1.text": "Introduction of extended multiphysics simulations",
-        "roadmap.item2.title": "Q2 2023",
-        "roadmap.item2.text": "Integration of AI-based optimization algorithms",
-        "roadmap.item3.title": "Q3 2023",
-        "roadmap.item3.text": "Expansion of additive manufacturing capacities",
-        "roadmap.item4.title": "Q4 2023",
-        "roadmap.item4.text": "Digital twin for production plants",
-        "roadmap.item5.title": "2024",
-        "roadmap.item5.text": "Sustainable material innovations and circular economy",
+        "roadmap.item1.title": "Multiphysics Simulations",
+        "roadmap.item1.text": "Introduction of extended simulation capabilities",
+        "roadmap.item2.title": "AI Optimization",
+        "roadmap.item2.text": "Integration of AI-based algorithms",
+        "roadmap.item3.title": "Additive Manufacturing",
+        "roadmap.item3.text": "Expansion of manufacturing capacities",
+        "roadmap.item4.title": "Digital Twin",
+        "roadmap.item4.text": "For production plants",
+        "roadmap.item5.title": "Sustainability",
+        "roadmap.item5.text": "Material innovations and circular economy",
         
         // News
         "news.title": "News",
@@ -247,8 +225,6 @@ const translations = {
         "news.news1.description": "We are pleased to have received the \"Green Engineering Award 2023\" for our project to save material in series parts. Through optimized constructions, we were able to save more than 50 tons of steel annually for our customers.",
         "news.news2.title": "New software licenses for extended simulation options",
         "news.news2.description": "In order to be able to offer our customers even better services, we have expanded our software portfolio. From now on, ANSYS Mechanical Premium and Siemens Simcenter are available to us for complex multiphysics simulations.",
-        "news.news3.title": "Successful certification according to DIN EN ISO 9001:2015",
-        "news.news3.description": "After intensive preparation, BMEC has successfully passed the certification according to DIN EN ISO 9001:2015. This underlines our commitment to high-quality engineering services and continuous improvement.",
         
         // Contact
         "contact.title": "Contact us",
@@ -316,24 +292,64 @@ languageBtns.forEach(btn => {
     });
 });
 
-// Service cards functionality
+// Service Modal functionality
 const serviceCards = document.querySelectorAll('.service-card');
-const tabContents = document.querySelectorAll('.tab-content');
+const serviceModal = document.getElementById('service-modal');
+const closeModal = document.querySelector('.close-modal');
+const modalServiceImg = document.getElementById('modal-service-img');
+const modalServiceTitle = document.getElementById('modal-service-title');
+const modalServiceDescription = document.getElementById('modal-service-description');
+const modalServiceItems = document.getElementById('modal-service-items');
+
+// Service images mapping
+const serviceImages = {
+    'tab1': 'https://images.unsplash.com/photo-1581093057305-25f0a6f6d3aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+    'tab2': 'https://images.unsplash.com/photo-1581093057927-02e5bb8f5fe3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+    'tab3': 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+    'tab4': 'https://images.unsplash.com/photo-1581093057305-25f0a6f6d3aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+    'tab5': 'https://images.unsplash.com/photo-1581093057305-25f0a6f6d3aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+};
 
 serviceCards.forEach(card => {
     card.addEventListener('click', () => {
-        serviceCards.forEach(c => c.classList.remove('active'));
-        tabContents.forEach(content => content.classList.remove('active'));
-        
-        card.classList.add('active');
         const tabId = card.getAttribute('data-tab');
-        document.getElementById(tabId).classList.add('active');
         
-        // Smooth scroll to content
-        document.getElementById(tabId).scrollIntoView({
-            behavior: 'smooth'
-        });
+        // Set modal content
+        modalServiceImg.src = serviceImages[tabId];
+        modalServiceTitle.textContent = translations[currentLang][`services.content${tabId.slice(-1)}.title`];
+        modalServiceDescription.textContent = translations[currentLang][`services.content${tabId.slice(-1)}.description`];
+        
+        // Clear previous items
+        modalServiceItems.innerHTML = '';
+        
+        // Add new items
+        for (let i = 1; i <= 6; i++) {
+            const itemKey = `services.content${tabId.slice(-1)}.item${i}`;
+            if (translations[currentLang][itemKey]) {
+                const li = document.createElement('li');
+                li.textContent = translations[currentLang][itemKey];
+                modalServiceItems.appendChild(li);
+            }
+        }
+        
+        // Show modal
+        serviceModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
     });
+});
+
+// Close modal
+closeModal.addEventListener('click', () => {
+    serviceModal.classList.remove('active');
+    document.body.style.overflow = '';
+});
+
+// Close modal when clicking outside
+serviceModal.addEventListener('click', (e) => {
+    if (e.target === serviceModal) {
+        serviceModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
 });
 
 // Mobile Navigation
@@ -392,6 +408,29 @@ document.addEventListener('click', (e) => {
     if (window.innerWidth <= 768 && !e.target.closest('nav') && !e.target.closest('.mobile-menu-btn')) {
         nav.classList.remove('show');
     }
+});
+
+// Header scroll behavior
+let lastScroll = 0;
+const header = document.getElementById('main-header');
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll <= 0) {
+        header.classList.remove('header-hidden');
+        return;
+    }
+    
+    if (currentScroll > lastScroll && !header.classList.contains('header-hidden')) {
+        // Scroll down
+        header.classList.add('header-hidden');
+    } else if (currentScroll < lastScroll && header.classList.contains('header-hidden')) {
+        // Scroll up
+        header.classList.remove('header-hidden');
+    }
+    
+    lastScroll = currentScroll;
 });
 
 // Image Slider

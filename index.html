@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header id="main-header">
         <div class="container header-content">
             <div class="logo-container">
-                <img src="/home/uni/Documents/Webpage-Ing/images/logo.jpg" alt="BMEC Logo" class="logo-img">
+                <img src="./images/logo.png" alt="BMEC Logo" class="logo-img">
                 <div class="logo">BMEC<span>Engineering</span></div>
             </div>
             <nav>
@@ -63,6 +63,20 @@
             </div>
         </div>
     </section>
+
+    <!-- Anchor Navigation -->
+    <nav class="anchor-nav" id="anchor-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#team" data-i18n="nav.team">Team</a></li>
+                <li><a href="#services" data-i18n="nav.services">Leistungen</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Projekte</a></li>
+                <li><a href="#roadmap" data-i18n="nav.roadmap">Roadmap</a></li>
+                <li><a href="#news" data-i18n="nav.news">News</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="container services-container" id="services">
         <h2 class="section-title" data-i18n="services.title">Unsere Leistungen</h2>
@@ -117,103 +131,20 @@
                 <p data-i18n="services.tab5.short">Schweißtechnik und Fügeverfahren</p>
             </div>
         </div>
-        
-        <div class="tab-content active" id="tab1">
-            <div class="content-wrapper">
-                <div class="content-text">
-                    <h2 data-i18n="services.content1.title">Konstruktion und Entwicklung</h2>
-                    <p data-i18n="services.content1.description">Unsere Ingenieure entwickeln präzise Konstruktionslösungen nach DIN- und ISO-Normen mit modernsten CAD-Systemen. Von der ersten Skizze bis zur fertigen technischen Zeichnung mit vollständiger Toleranzanalyse begleiten wir Ihr Projekt gemäß VDI 2221.</p>
-                    <ul>
-                        <li data-i18n="services.content1.item1">3D-CAD Konstruktion mit SolidWorks (nach VDI 2212), Inventor und CATIA V5</li>
-                        <li data-i18n="services.content1.item2">Bauteil- und Baugruppenkonstruktion mit FEM-gerechter Modellierung</li>
-                        <li data-i18n="services.content1.item3">Technische Dokumentation nach DIN 6789 und ISO 7200</li>
-                        <li data-i18n="services.content1.item4">Toleranzanalysen nach GPS (Geometrische Produktspezifikation)</li>
-                        <li data-i18n="services.content1.item5">Stücklistenmanagement mit ERP-Schnittstellen (SAP, ProAlpha)</li>
-                        <li data-i18n="services.content1.item6">Schweißkonstruktionen nach DIN EN 1090 und DIN EN 15085</li>
-                    </ul>
+    </div>
+
+    <!-- Service Detail Modal -->
+    <div class="service-modal" id="service-modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-wrapper">
+                <div class="modal-image">
+                    <img id="modal-service-img" src="" alt="">
                 </div>
-                <div class="content-image">
-                    <img src="https://images.unsplash.com/photo-1581093057305-25f0a6f6d3aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Konstruktion">
-                </div>
-            </div>
-        </div>
-        
-        <div class="tab-content" id="tab2">
-            <div class="content-wrapper">
-                <div class="content-text">
-                    <h2 data-i18n="services.content2.title">Simulation und Berechnung</h2>
-                    <p data-i18n="services.content2.description">Mit FEM- und CFD-Simulationen nach VDI 2206 optimieren wir Ihre Konstruktionen virtuell. Wir führen statische und dynamische Analysen nach FKM-Richtlinie durch und validieren die Ergebnisse mit experimentellen Methoden (DIC, Dehnungsmessstreifen).</p>
-                    <ul>
-                        <li data-i18n="services.content2.item1">Statische und dynamische FEM-Analysen (ANSYS, Abaqus, Nastran)</li>
-                        <li data-i18n="services.content2.item2">Thermische Simulationen mit nichtlinearen Materialmodellen</li>
-                        <li data-i18n="services.content2.item3">Strömungssimulationen (CFD) für laminare und turbulente Strömungen</li>
-                        <li data-i18n="services.content2.item4">Festigkeits- und Lebensdauerberechnungen nach FKM-Richtlinie</li>
-                        <li data-i18n="services.content2.item5">Schwingungsanalysen mit Modal- und Spektralanalysen</li>
-                        <li data-i18n="services.content2.item6">Multiphysik-Simulationen (thermomechanisch, fluid-strukturgekoppelt)</li>
-                    </ul>
-                </div>
-                <div class="content-image">
-                    <img src="https://images.unsplash.com/photo-1581093057927-02e5bb8f5fe3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Simulation">
-                </div>
-            </div>
-        </div>
-        
-        <div class="tab-content" id="tab3">
-            <div class="content-wrapper">
-                <div class="content-text">
-                    <h2 data-i18n="services.content3.title">Prototyping und Testing</h2>
-                    <p data-i18n="services.content3.description">Von 3D-Druck (Additive Fertigung nach VDI 3405) über CNC-gefertigte Funktionsmuster bis hin zu kleinen Serien realisieren wir Ihre Prototypen mit modernsten Fertigungsverfahren. Wir begleiten den gesamten Produktentstehungsprozess nach VDI 2221.</p>
-                    <ul>
-                        <li data-i18n="services.content3.item1">Rapid Prototyping (FDM, SLS, SLA nach ASTM F2792)</li>
-                        <li data-i18n="services.content3.item2">CNC-Prototypenfertigung (5-Achs-Simultanbearbeitung)</li>
-                        <li data-i18n="services.content3.item3">Funktionstests und Validierung nach VDI/VDE 2650</li>
-                        <li data-i18n="services.content3.item4">Mess- und Prüftechnik (3D-Scannen nach VDI/VDE 2630, CMM)</li>
-                        <li data-i18n="services.content3.item5">Kleinserienfertigung mit werkzeuglosen Umformverfahren</li>
-                        <li data-i18n="services.content3.item6">Materialprüfung nach DIN EN ISO 6892-1 und ASTM E8</li>
-                    </ul>
-                </div>
-                <div class="content-image">
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Prototyping">
-                </div>
-            </div>
-        </div>
-        
-        <div class="tab-content" id="tab4">
-            <div class="content-wrapper">
-                <div class="content-text">
-                    <h2 data-i18n="services.content4.title">Technische Beratung</h2>
-                    <p data-i18n="services.content4.description">Unsere Experten stehen Ihnen mit fundiertem Fachwissen zur Seite - von Materialauswahl nach Werkstoffdatenblättern über Fertigungsoptimierung nach Lean-Prinzipien bis hin zu Normen und Richtlinien (DIN, ISO, ASTM, ASME).</p>
-                    <ul>
-                        <li data-i18n="services.content4.item1">Fertigungsoptimierung mit Wertstromanalyse nach VDI 5200</li>
-                        <li data-i18n="services.content4.item2">Materialberatung mit Zugversuchen nach DIN EN ISO 6892-1</li>
-                        <li data-i18n="services.content4.item3">Normen und Richtlinien (DIN, ISO, ASTM, ASME, PED)</li>
-                        <li data-i18n="services.content4.item4">Qualitätssicherung mit SPC nach ISO 7870</li>
-                        <li data-i18n="services.content4.item5">Prozessoptimierung mit Six Sigma Methoden</li>
-                        <li data-i18n="services.content4.item6">Risikoanalysen nach FMEA (VDI 2246) und FMECA</li>
-                    </ul>
-                </div>
-                <div class="content-image">
-                    <img src="https://images.unsplash.com/photo-1581093057305-25f0a6f6d3aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Beratung">
-                </div>
-            </div>
-        </div>
-        
-        <div class="tab-content" id="tab5">
-            <div class="content-wrapper">
-                <div class="content-text">
-                    <h2 data-i18n="services.content5.title">International Welding Engineer (IWE)</h2>
-                    <p data-i18n="services.content5.description">Als zertifizierte International Welding Engineers nach IIW/EWF bieten wir umfassende Expertise in Schweißtechnik und Fügeverfahren gemäß DIN EN ISO 3834 und DIN EN 1090. Unsere Dienstleistungen umfassen die gesamte Prozesskette von der Konstruktion bis zur Qualitätssicherung.</p>
-                    <ul>
-                        <li data-i18n="services.content5.item1">Schweißtechnische Berechnungen nach DIN EN 1993-1-8 (Eurocode 3)</li>
-                        <li data-i18n="services.content5.item2">Schweißnahtvorbereitung und -auslegung nach DIN EN ISO 2553</li>
-                        <li data-i18n="services.content5.item3">WPS/PQR nach DIN EN ISO 15614 und DIN EN ISO 15609</li>
-                        <li data-i18n="services.content5.item4">Zerstörungsfreie Prüfungen (VT, PT, MT, UT, RT nach DIN EN ISO 17635)</li>
-                        <li data-i18n="services.content5.item5">Schweißaufsicht nach DIN EN ISO 14731</li>
-                        <li data-i18n="services.content5.item6">Zertifizierung nach DIN EN 1090 und DIN EN 15085</li>
-                    </ul>
-                </div>
-                <div class="content-image">
-                    <img src="https://images.unsplash.com/photo-1581093057305-25f0a6f6d3aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="IWE">
+                <div class="modal-text">
+                    <h2 id="modal-service-title"></h2>
+                    <p id="modal-service-description"></p>
+                    <ul id="modal-service-items"></ul>
                 </div>
             </div>
         </div>
@@ -287,88 +218,46 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="project-card">
-                <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1581093057927-02e5bb8f5fe3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="project-info">
-                    <h3 class="project-title" data-i18n="projects.project4.title">Industrie 4.0 Steuerung</h3>
-                    <p data-i18n="projects.project4.description">Entwicklung einer intelligenten Steuerung für vernetzte Produktionsanlagen mit Echtzeit-Monitoring.</p>
-                    <div class="project-tech">
-                        <span>IoT</span>
-                        <span>Industrie 4.0</span>
-                        <span>Steuerungstechnik</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1581094795057-5a0aae6dae7f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="project-info">
-                    <h3 class="project-title" data-i18n="projects.project5.title">Energieeffiziente Antriebe</h3>
-                    <p data-i18n="projects.project5.description">Optimierung von Antriebssystemen für 20% höhere Energieeffizienz bei gleichbleibender Leistung.</p>
-                    <div class="project-tech">
-                        <span>Antriebstechnik</span>
-                        <span>Energieeffizienz</span>
-                        <span>Simulation</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                <div class="project-info">
-                    <h3 class="project-title" data-i18n="projects.project6.title">Medizintechnik Komponenten</h3>
-                    <p data-i18n="projects.project6.description">Entwicklung sterilisierbarer Hochpräzisionskomponenten für medizinische Geräte nach ISO 13485.</p>
-                    <div class="project-tech">
-                        <span>Medizintechnik</span>
-                        <span>Präzision</span>
-                        <span>Biokompatibilität</span>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
     <section class="roadmap-section" id="roadmap">
         <div class="container">
             <h2 class="section-title" data-i18n="roadmap.title">Technologie-Roadmap</h2>
-            <div class="roadmap-container">
-                <div class="roadmap-line"></div>
-                <div class="roadmap-items">
-                    <div class="roadmap-item">
-                        <div class="roadmap-dot"></div>
-                        <div class="roadmap-content">
-                            <h3 data-i18n="roadmap.item1.title">Q1 2023</h3>
-                            <p data-i18n="roadmap.item1.text">Einführung erweiterter Multiphysik-Simulationen</p>
-                        </div>
+            <div class="compact-roadmap">
+                <div class="roadmap-item">
+                    <div class="roadmap-date">Q1 2023</div>
+                    <div class="roadmap-content">
+                        <h3 data-i18n="roadmap.item1.title">Multiphysik-Simulationen</h3>
+                        <p data-i18n="roadmap.item1.text">Einführung erweiterter Simulationsmöglichkeiten</p>
                     </div>
-                    <div class="roadmap-item">
-                        <div class="roadmap-dot"></div>
-                        <div class="roadmap-content">
-                            <h3 data-i18n="roadmap.item2.title">Q2 2023</h3>
-                            <p data-i18n="roadmap.item2.text">Integration von KI-basierten Optimierungsalgorithmen</p>
-                        </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-date">Q2 2023</div>
+                    <div class="roadmap-content">
+                        <h3 data-i18n="roadmap.item2.title">KI-Optimierung</h3>
+                        <p data-i18n="roadmap.item2.text">Integration von KI-basierten Algorithmen</p>
                     </div>
-                    <div class="roadmap-item">
-                        <div class="roadmap-dot"></div>
-                        <div class="roadmap-content">
-                            <h3 data-i18n="roadmap.item3.title">Q3 2023</h3>
-                            <p data-i18n="roadmap.item3.text">Erweiterung der Additiven Fertigungskapazitäten</p>
-                        </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-date">Q3 2023</div>
+                    <div class="roadmap-content">
+                        <h3 data-i18n="roadmap.item3.title">Additive Fertigung</h3>
+                        <p data-i18n="roadmap.item3.text">Erweiterung der Fertigungskapazitäten</p>
                     </div>
-                    <div class="roadmap-item">
-                        <div class="roadmap-dot"></div>
-                        <div class="roadmap-content">
-                            <h3 data-i18n="roadmap.item4.title">Q4 2023</h3>
-                            <p data-i18n="roadmap.item4.text">Digitaler Zwilling für Produktionsanlagen</p>
-                        </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-date">Q4 2023</div>
+                    <div class="roadmap-content">
+                        <h3 data-i18n="roadmap.item4.title">Digitaler Zwilling</h3>
+                        <p data-i18n="roadmap.item4.text">Für Produktionsanlagen</p>
                     </div>
-                    <div class="roadmap-item">
-                        <div class="roadmap-dot"></div>
-                        <div class="roadmap-content">
-                            <h3 data-i18n="roadmap.item5.title">2024</h3>
-                            <p data-i18n="roadmap.item5.text">Nachhaltige Materialinnovationen und Kreislaufwirtschaft</p>
-                        </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-date">2024</div>
+                    <div class="roadmap-content">
+                        <h3 data-i18n="roadmap.item5.title">Nachhaltigkeit</h3>
+                        <p data-i18n="roadmap.item5.text">Materialinnovationen und Kreislaufwirtschaft</p>
                     </div>
                 </div>
             </div>
@@ -388,54 +277,52 @@
             <h3 class="news-title" data-i18n="news.news2.title">Neue Softwarelizenzen für erweiterte Simulationsmöglichkeiten</h3>
             <p data-i18n="news.news2.description">Um unseren Kunden noch bessere Dienstleistungen anbieten zu können, haben wir unsere Softwarepalette erweitert. Ab sofort stehen uns ANSYS Mechanical Premium und Siemens Simcenter für komplexe Multiphysik-Simulationen zur Verfügung.</p>
         </div>
-        
-        <div class="news-item">
-            <div class="news-date">10. Januar 2023</div>
-            <h3 class="news-title" data-i18n="news.news3.title">Erfolgreiche Zertifizierung nach DIN EN ISO 9001:2015</h3>
-            <p data-i18n="news.news3.description">Nach intensiver Vorbereitung hat BMEC die Zertifizierung nach DIN EN ISO 9001:2015 erfolgreich bestanden. Dies unterstreicht unser Engagement für qualitativ hochwertige Ingenieursdienstleistungen und kontinuierliche Verbesserung.</p>
-        </div>
     </section>
 
-    <section class="team-section" id="contact">
+    <section class="contact-section" id="contact">
         <div class="container">
-            <h2 class="section-title" data-i18n="contact.title">Kontaktieren Sie uns</h2>
-            
-            <div class="contact-form">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name" data-i18n="contact.form.name">Name</label>
-                        <input type="text" id="name" class="form-control" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email" data-i18n="contact.form.email">E-Mail</label>
-                        <input type="email" id="email" class="form-control" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone" data-i18n="contact.form.phone">Telefon (optional)</label>
-                        <input type="tel" id="phone" class="form-control">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject" data-i18n="contact.form.subject">Betreff</label>
-                        <input type="text" id="subject" class="form-control" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message" data-i18n="contact.form.message">Ihre Nachricht</label>
-                        <textarea id="message" class="form-control" required></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>
-                            <input type="checkbox" id="privacy" required> 
-                            <span data-i18n="contact.form.privacy">Ich habe die Datenschutzerklärung gelesen und akzeptiere sie.</span>
-                        </label>
-                    </div>
-                    
-                    <button type="submit" class="btn" data-i18n="contact.form.button">Nachricht senden</button>
-                </form>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <h2 class="section-title" data-i18n="contact.title">Kontaktieren Sie uns</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" data-i18n="contact.form.name">Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact.form.email">E-Mail</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" data-i18n="contact.form.phone">Telefon (optional)</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" data-i18n="contact.form.subject">Betreff</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" data-i18n="contact.form.message">Ihre Nachricht</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="privacy" required> 
+                                <span data-i18n="contact.form.privacy">Ich habe die Datenschutzerklärung gelesen und akzeptiere sie.</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn" data-i18n="contact.form.button">Nachricht senden</button>
+                    </form>
+                </div>
+                <div class="contact-image">
+                    <img src="https://images.unsplash.com/photo-1581093057305-25f0a6f6d3aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Technische Beratung">
+                </div>
             </div>
         </div>
     </section>
