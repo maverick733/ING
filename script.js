@@ -419,7 +419,14 @@ window.addEventListener('scroll', () => {
     
     if (currentScroll <= 0) {
         header.classList.remove('header-hidden');
+        header.classList.remove('header-scrolled');
         return;
+    }
+    
+    if (currentScroll > 100) {
+        header.classList.add('header-scrolled');
+    } else {
+        header.classList.remove('header-scrolled');
     }
     
     if (currentScroll > lastScroll && !header.classList.contains('header-hidden')) {
