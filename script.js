@@ -303,11 +303,11 @@ const modalServiceItems = document.getElementById('modal-service-items');
 
 // Service images mapping
 const serviceImages = {
-    'tab1': 'https://images.unsplash.com/photo-1581093057305-25f0a6f6d3aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-    'tab2': 'https://images.unsplash.com/photo-1581093057927-02e5bb8f5fe3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+    'tab1': '/home/uni/Documents/Webpage-Ing/images/KONST.jpeg',
+    'tab2': '/home/uni/Documents/Webpage-Ing/images/SIMULATION.jpeg',
     'tab3': 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-    'tab4': 'https://images.unsplash.com/photo-1581093057305-25f0a6f6d3aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-    'tab5': 'https://images.unsplash.com/photo-1581093057305-25f0a6f6d3aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+    'tab4': '/home/uni/Documents/Webpage-Ing/images/BERATUNG.jpeg',
+    'tab5': '/home/uni/Documents/Webpage-Ing/images/IWE.jpeg'
 };
 
 serviceCards.forEach(card => {
