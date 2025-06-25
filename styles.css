@@ -589,92 +589,629 @@ nav ul li a:hover {
     padding: 4rem 0;
     background-color: var(--dark-bg);
     color: white;
+    position: relative;
 }
 
 .roadmap-section .section-title {
     color: white;
 }
 
-.timeline {
+.roadmap-steps {
+    margin-top: 2rem;
     position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 0;
 }
 
-.timeline::after {
-    content: '';
+.roadmap-progress-container {
+    position: sticky;
+    top: 100px;
+    z-index: 10;
+    background-color: var(--dark-bg);
+    padding: 20px 0 40px;
+    margin-bottom: 20px;
+}
+
+.roadmap-progress {
+    position: relative;
+    height: 6px;
+    background-color: transparent;
+    margin: 2rem 0 3rem;
+    border-radius: 3px;
+}
+
+.progress-bar {
     position: absolute;
-    width: 2px;
-    background-color: var(--accent-color);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -1px;
+    height: 100%;
+    width: 100%;
+    background-color: var(--highlight-color);
+    transform-origin: left;
+    animation: progress-animation 1.5s ease-out forwards;
+    border-radius: 3px;
 }
 
-.timeline-item {
-    padding: 10px 40px;
-    position: relative;
-    width: 50%;
-    box-sizing: border-box;
-}
-
-.timeline-item:nth-child(odd) {
-    left: 0;
-}
-
-.timeline-item:nth-child(even) {
-    left: 50%;
-}
-
-.timeline-content {
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 6px;
+.progress-step {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    box-shadow: 0 0 0 3px var(--highlight-color);
     transition: all 0.3s;
+    z-index: 2;
+    touch-action: none;
 }
 
-.timeline-item:hover .timeline-content {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.timeline-date {
-    color: var(--highlight-color);
-    font-size: 0.8rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-}
-
-.timeline-content h3 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    color: var(--highlight-color);
-}
-
-.timeline-content p {
-    font-size: 0.85rem;
-    line-height: 1.5;
-}
-
-.timeline-item::after {
-    content: '';
+.progress-endpoint {
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
     background-color: var(--highlight-color);
     border-radius: 50%;
     top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
+    right: 0;
+    transform: translate(50%, -50%);
+    z-index: 2;
 }
 
-.timeline-item:nth-child(odd)::after {
-    right: -6px;
+.progress-step[data-step="1"],
+.progress-step[data-step="5"] {
+    cursor: default;
 }
 
-.timeline-item:nth-child(even)::after {
-    left: -6px;
+.progress-step:hover {
+    transform: translate(-50%, -50%) scale(1.3);
+}
+
+.step-tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--highlight-color);
+    color: var(--dark-bg);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.progress-step:hover .step-tooltip {
+    opacity: 1;
+}
+
+.progress-step.dragging {
+    transform: translate(-50%, -50%) scale(1.5);
+    box-shadow: 0 0 0 5px var(--highlight-color);
+}
+
+.progress-step.dragging .step-tooltip {
+    opacity: 1;
+    top: -40px;
+    font-size: 0.8rem;
+}
+
+.progress-step:not([data-step="5"])::after {
+    content: attr(data-percentage);
+    position: absolute;
+    top: -20px;
+    left: 100%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    color: var(--light-color);
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2px 5px;
+    border-radius: 3px;
+    min-width: 30px;
+    text-align: center;
+}
+
+.progress-start, .progress-end {
+    position: absolute;
+    top: -30px;
+    font-size: 0.8rem;
+    color: var(--light-color);
+    font-weight: 500;
+}
+
+.progress-start {
+    left: 0;
+}
+
+.progress-end {
+    right: 0;
+}
+
+.roadmap-items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 40px;
+}
+
+.roadmap-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.roadmap-item.active {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.step-marker {
+    background-color: var(--highlight-color);
+    color: var(--dark-bg);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 5px rgba(0, 168, 232, 0.2);
+}
+
+.step-content {
+    flex-grow: 1;
+    transition: all 0.3s;
+}
+
+.roadmap-item:hover .step-content {
+    transform: translateX(5px);
+}
+
+.step-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: var(--highlight-color);
+}
+
+.step-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.step-time {
+    font-size: 0.8rem;
+    color: var(--light-color);
+    font-style: italic;
+}
+
+@keyframes progress-animation {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+}
+
+/* Responsive Roadmap */
+@media (max-width: 768px) {
+    .roadmap-progress-container {
+        top: 80px;
+        padding: 10px 0 30px;
+    }
+    
+    .roadmap-item {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .step-marker {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+    
+    .progress-step:not([data-step="5"])::after {
+        top: -25px;
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .roadmap-progress-container {
+        top: 60px;
+    }
+    
+    .progress-step {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .step-tooltip {
+        font-size: 0.6rem;
+        top: -25px;
+    }
+    
+    .progress-step:not([data-step="5"])::after {
+        display: none;
+    }
+    
+    .step-content {
+        padding: 0.5rem;
+    }
+}
+
+/* Responsive Roadmap */
+@media (max-width: 768px) {
+    .roadmap-progress-container {
+        top: 80px;
+        padding: 10px 0 30px;
+    }
+    
+    .roadmap-item {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .step-marker {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+    
+    .progress-step:not(:last-child)::after {
+        top: -25px;
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .roadmap-progress-container {
+        top: 60px;
+    }
+    
+    .progress-step {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .step-tooltip {
+        font-size: 0.6rem;
+        top: -25px;
+    }
+    
+    .progress-step:not(:last-child)::after {
+        display: none;
+    }
+    
+    .step-content {
+        padding: 0.5rem;
+    }
+}
+/* Responsive Roadmap */
+@media (max-width: 768px) {
+    .roadmap-progress-container {
+        top: 80px;
+        padding: 10px 0 30px;
+    }
+    
+    .roadmap-item {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .step-marker {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+    
+    .progress-step:not([data-step="1"])::before {
+        top: -25px;
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .roadmap-progress-container {
+        top: 60px;
+    }
+    
+    .progress-step {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .step-tooltip {
+        font-size: 0.6rem;
+        top: -25px;
+    }
+    
+    .progress-step:not([data-step="1"])::before {
+        display: none;
+    }
+    
+    .step-content {
+        padding: 0.5rem;
+    }
+}
+/* Responsive Roadmap */
+@media (max-width: 768px) {
+    .roadmap-progress-container {
+        top: 80px;
+        padding: 10px 0 30px;
+    }
+    
+    .roadmap-item {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .step-marker {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+    
+    .roadmap-progress {
+        margin: 1rem 0 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .roadmap-progress-container {
+        top: 60px;
+    }
+    
+    .progress-step {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .step-tooltip {
+        font-size: 0.6rem;
+        top: -25px;
+    }
+    
+    .step-percentage {
+        font-size: 0.6rem;
+        bottom: -20px;
+    }
+    
+    .step-content {
+        padding: 0.5rem;
+    }
+}
+/* Responsive Roadmap */
+@media (max-width: 768px) {
+    .roadmap-item {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .step-marker {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+    
+    .roadmap-progress {
+        margin: 1rem 0 2rem;
+    }
+}
+
+/* Responsive Roadmap */
+@media (max-width: 768px) {
+    .roadmap-progress-container {
+        top: 60px;
+        padding: 10px 0 20px;
+    }
+    
+    .roadmap-item {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .step-marker {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+    
+    .progress-percentage {
+        font-size: 0.6rem;
+        top: -20px;
+    }
+    
+    .step-tooltip {
+        font-size: 0.6rem;
+        top: -25px;
+    }
+    
+    .step-percentage {
+        font-size: 0.6rem;
+        bottom: -20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .roadmap-progress-container {
+        top: 50px;
+    }
+    
+    .progress-percentage {
+        display: none;
+    }
+    
+    .step-content {
+        padding: 1rem;
+    }
+}
+
+/* Responsive Roadmap */
+@media (max-width: 768px) {
+    .roadmap-item {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .step-marker {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+    
+    .roadmap-progress {
+        margin: 1rem 0 2rem;
+    }
+}
+/* Roadmap Section Updates */
+.progress-step {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    box-shadow: 0 0 0 3px var(--highlight-color);
+    transition: all 0.3s;
+    z-index: 2;
+    touch-action: none; /* Für bessere Touch-Unterstützung */
+}
+
+.progress-step:hover {
+    transform: translate(-50%, -50%) scale(1.3);
+}
+
+.step-tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--highlight-color);
+    color: var(--dark-bg);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.progress-step:hover .step-tooltip {
+    opacity: 1;
+}
+
+.progress-step.dragging {
+    transform: translate(-50%, -50%) scale(1.5);
+    box-shadow: 0 0 0 5px var(--highlight-color);
+}
+
+.progress-step.dragging .step-tooltip {
+    opacity: 1;
+    top: -40px;
+    font-size: 0.8rem;
+}
+
+/* Anpassung für die Prozentanzeige */
+.step-percentage {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    color: var(--light-color);
+    font-weight: bold;
+}
+
+
+/* Responsive Roadmap */
+@media (max-width: 768px) {
+    .roadmap-item {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .step-marker {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+    
+    .roadmap-progress {
+        margin: 1rem 0 2rem;
+    }
+}
+
+/* Mobile Timeline */
+@media (max-width: 768px) {
+    .timeline {
+        padding: 20px 0 40px;
+    }
+    
+    .timeline-spline {
+        width: 2px;
+        height: 90%;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(
+            to bottom,
+            transparent 0%,
+            transparent calc(10% - 1px),
+            var(--accent-color) calc(10% - 1px),
+            var(--accent-color) calc(10% + 1px),
+            transparent calc(10% + 1px),
+            transparent calc(30% - 1px),
+            var(--accent-color) calc(30% - 1px),
+            var(--accent-color) calc(30% + 1px),
+            transparent calc(30% + 1px),
+            transparent calc(50% - 1px),
+            var(--accent-color) calc(50% - 1px),
+            var(--accent-color) calc(50% + 1px),
+            transparent calc(50% + 1px),
+            transparent calc(70% - 1px),
+            var(--accent-color) calc(70% - 1px),
+            var(--accent-color) calc(70% + 1px),
+            transparent calc(70% + 1px),
+            transparent calc(90% - 1px),
+            var(--accent-color) calc(90% - 1px),
+            var(--accent-color) calc(90% + 1px),
+            transparent calc(90% + 1px),
+            transparent 100%
+        );
+    }
+    
+    .timeline-items {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .timeline-item {
+        width: 90%;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+    
+    .timeline-item::before {
+        left: -6px;
+        top: 30px;
+        transform: translate(0, 0);
+    }
+    
+    .timeline-content {
+        margin-left: 30px;
+        margin-top: 0;
+    }
 }
 
 /* News Section */
@@ -965,33 +1502,6 @@ footer {
     
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .timeline::after {
-        left: 31px;
-    }
-    
-    .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-    
-    .timeline-item:nth-child(even) {
-        left: 0;
-    }
-    
-    .timeline-item::after {
-        left: 25px;
-    }
-    
-    .timeline-item:nth-child(odd)::after {
-        right: auto;
-        left: 25px;
-    }
-    
-    .timeline-content {
-        padding: 15px;
     }
 }
 

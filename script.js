@@ -3,7 +3,7 @@ const translations = {
     de: {
         // Navigation
         "nav.home": "Startseite",
-        "nav.team": "Team",
+        "nav.team": "Expertise",
         "nav.services": "Leistungen",
         "nav.projects": "Projekte",
         "nav.roadmap": "Roadmap",
@@ -21,68 +21,68 @@ const translations = {
         // Services
         "services.title": "Unsere Leistungen",
         "services.tab1": "Konstruktion",
-        "services.tab1.short": "Präzise Konstruktionslösungen nach DIN- und ISO-Normen",
+        "services.tab1.short": "Fachgerechte Konstruktionsunterstützung nach branchenüblichen Methoden & Richtlinien (z.B. DIN, ISO, VDI)",
         "services.tab2": "Simulation",
-        "services.tab2.short": "FEM- und CFD-Simulationen nach VDI 2206",
+        "services.tab2.short": "FEM- und CFD-Simulationen unter Berücksichtigung der VDI 2206",
         "services.tab3": "Prototyping",
-        "services.tab3.short": "Moderne Fertigungsverfahren für Prototypen",
+        "services.tab3.short": "Prototypenfertigung mit modernen Technologien",
         "services.tab4": "Beratung",
-        "services.tab4.short": "Fundiertes Fachwissen für Ihre Projekte",
-        "services.tab5": "IWE",
+        "services.tab4.short": "Beratung mit ingenieurwissenschaftlicher Expertise für Ihr Projekt",
+        "services.tab5": "IWE-Begleitung",
         "services.tab5.short": "Schweißtechnik und Fügeverfahren",
         
-        "services.content1.title": "Konstruktion und Entwicklung",
-        "services.content1.description": "Unsere Ingenieure entwickeln präzise Konstruktionslösungen nach DIN- und ISO-Normen mit modernsten CAD-Systemen. Von der ersten Skizze bis zur fertigen technischen Zeichnung mit vollständiger Toleranzanalyse begleiten wir Ihr Projekt gemäß VDI 2221.",
-        "services.content1.item1": "3D-CAD Konstruktion mit SolidWorks (nach VDI 2212), Inventor und CATIA V5",
-        "services.content1.item2": "Bauteil- und Baugruppenkonstruktion mit FEM-gerechter Modellierung",
-        "services.content1.item3": "Technische Dokumentation nach DIN 6789 und ISO 7200",
-        "services.content1.item4": "Toleranzanalysen nach GPS (Geometrische Produktspezifikation)",
+        "services.content1.title": "Technische Konstruktionsdienstleistungen nach Industriestandards",
+        "services.content1.description": "Unsere Ingenieure mit maschinenbautechnischer Qualifikation (HTL/TU) unterstützen Sie bei der Entwicklung normenkonformer Konstruktionslösungen. Alle Leistungen erfolgen im Rahmen ingenieurwissenschaftlicher Beratung gemäß geltendem Gewerberecht.",
+        "services.content1.item1": "3D-CAD-Modellierung, Erstellung von Bauteil- und Baugruppenkonstruktionen mit FreeCAD auf Wunsch auch mit anderen Tools wie SolidWorks, Inventor, CATIA V5, Orientierung an VDI-Richtlinien (z.B. VDI 2212 für CAD-Modellierung)",
+        "services.content1.item2": "FEM-gerechte Modellierung, Vorbereitende Modellierung für spätere Simulationsberechnungen und Vorabschätzung der Bauteile/Baugruppen, erstellen von Simulationsstudien",
+        "services.content1.item3": "Technische Dokumentation, Zeichnungserstellung nach ISO 7200 und DIN 6789",
+        "services.content1.item4": "Toleranzmanagement, Unterstützung bei geometrischen Produktspezifikationen (GPS)",
         "services.content1.item5": "Stücklistenmanagement mit ERP-Schnittstellen (SAP, ProAlpha)",
-        "services.content1.item6": "Schweißkonstruktionen nach DIN EN 1090 und DIN EN 15085",
+        "services.content1.item6": "Schweißtechnische Konstruktionsberatung, Konstruktive Empfehlungen für schweißgerechte Gestaltung (DIN EN 1090-1)",
         
-        "services.content2.title": "Simulation und Berechnung",
-        "services.content2.description": "Mit FEM- und CFD-Simulationen nach VDI 2206 optimieren wir Ihre Konstruktionen virtuell. Wir führen statische und dynamische Analysen nach FKM-Richtlinie durch und validieren die Ergebnisse mit experimentellen Methoden (DIC, Dehnungsmessstreifen).",
-        "services.content2.item1": "Statische und dynamische FEM-Analysen (ANSYS, Abaqus, Nastran)",
-        "services.content2.item2": "Thermische Simulationen mit nichtlinearen Materialmodellen",
-        "services.content2.item3": "Strömungssimulationen (CFD) für laminare und turbulente Strömungen",
-        "services.content2.item4": "Festigkeits- und Lebensdauerberechnungen nach FKM-Richtlinie",
-        "services.content2.item5": "Schwingungsanalysen mit Modal- und Spektralanalysen",
+        "services.content2.title": "Simulationsdienstleistungen nach Ingenieurstandards",
+        "services.content2.description": "Wir unterstützen Sie bei der virtuellen Produktentwicklung durch wissenschaftlich fundierte Simulationsverfahren. Unsere Analysen erfolgen unter Anwendung etablierter Ingenieurmethoden (z.B. VDI 2206, FKM-Richtlinie) und dienen als Entscheidungsgrundlage für Ihre Konstruktionsprozesse.",
+        "services.content2.item1": "Finite-Elemente-Analysen (FEA), Lineare und nichtlineare Strukturanalysen mit FreeCAD oder auf Wunsch auch mit ANSYS/Abaqus, Modal- und Spektralanalysen für Schwingungsuntersuchungen",
+        "services.content2.item2": "Thermische Simulationen mit nichtlinearen Materialmodellen,Thermische Untersuchungen mit gekoppelten Modellen",
+        "services.content2.item3": "Strömungssimulationen (CFD), Laminare und turbulente Strömungsanalysen, ",
+        "services.content2.item4": "Festigkeitsbewertungen, Orientierung an FKM-Richtlinie für Bauteilauslegung",
+        "services.content2.item5": "Validierungsbegleitung, Unterstützung bei experimentellen Methoden (DIC, Dehnungsmessstreifen), Vergleich von Simulations- und Messdaten",
         "services.content2.item6": "Multiphysik-Simulationen (thermomechanisch, fluid-strukturgekoppelt)",
         
-        "services.content3.title": "Prototyping und Testing",
-        "services.content3.description": "Von 3D-Druck (Additive Fertigung nach VDI 3405) über CNC-gefertigte Funktionsmuster bis hin zu kleinen Serien realisieren wir Ihre Prototypen mit modernsten Fertigungsverfahren. Wir begleiten den gesamten Produktentstehungsprozess nach VDI 2221.",
-        "services.content3.item1": "Rapid Prototyping (FDM, SLS, SLA nach ASTM F2792)",
-        "services.content3.item2": "CNC-Prototypenfertigung (5-Achs-Simultanbearbeitung)",
-        "services.content3.item3": "Funktionstests und Validierung nach VDI/VDE 2650",
-        "services.content3.item4": "Mess- und Prüftechnik (3D-Scannen nach VDI/VDE 2630, CMM)",
-        "services.content3.item5": "Kleinserienfertigung mit werkzeuglosen Umformverfahren",
-        "services.content3.item6": "Materialprüfung nach DIN EN ISO 6892-1 und ASTM E8",
+        "services.content3.title": "Prototypenentwicklung & Testbegleitung",
+        "services.content3.description": "Wir unterstützen Sie bei der Realisierung von Prototypen mit modernen Fertigungstechnologien und orientieren uns dabei an etablierten ingenieurwissenschaftlichen Standards.",
+        "services.content3.item1": "Additive Fertigung, 3D-Druckverfahren (FDM, SLS, SLA) unter Berücksichtigung von VDI 3405",
+        "services.content3.item2": "CNC-Prototypenfertigung, Präzisionsbearbeitung inkl. 5-Achs-Technologie, Funktionsmuster als Entwicklungsgrundlage",
+        "services.content3.item3": "Testbegleitung, Unterstützung bei Funktionsvalidierungen, Messtechnische Dokumentation (3D-Scanning, Koordinatenmesstechnik)",
+        "services.content3.item4": "Mess- und Prüftechnik (3D-Scannen)",
+        "services.content3.item5": "Kleinserien, Werkzeuglose Fertigungslösungen für Vorlaufserien",
+        "services.content3.item6": "Materialprüfung & Bauteilvalidierung, Standardisierte Materialprüfung, Topologieoptimierte Bauteilbewertung, Validierungsdienstleistungen.  Wir unterstützen Sie bei der Herstellung von Prototypen unter Anwendung aktueller Fertigungsverfahren. Unsere Dienstleistungen dienen der Konzeptvalidierung und technischen Weiterentwicklung.",
         
-        "services.content4.title": "Technische Beratung",
-        "services.content4.description": "Unsere Experten stehen Ihnen mit fundiertem Fachwissen zur Seite - von Materialauswahl nach Werkstoffdatenblättern über Fertigungsoptimierung nach Lean-Prinzipien bis hin zu Normen und Richtlinien (DIN, ISO, ASTM, ASME).",
-        "services.content4.item1": "Fertigungsoptimierung mit Wertstromanalyse nach VDI 5200",
-        "services.content4.item2": "Materialberatung mit Zugversuchen nach DIN EN ISO 6892-1",
-        "services.content4.item3": "Normen und Richtlinien (DIN, ISO, ASTM, ASME, PED)",
-        "services.content4.item4": "Qualitätssicherung mit SPC nach ISO 7870",
-        "services.content4.item5": "Prozessoptimierung mit Six Sigma Methoden",
-        "services.content4.item6": "Risikoanalysen nach FMEA (VDI 2246) und FMECA",
+        "services.content4.title": "Technische Beratung & Ingenieurdienstleistungen",
+        "services.content4.description": "Wir unterstützen Unternehmen mit fachlicher Expertise bei produktions- und qualitätstechnischen Fragestellungen unter Anwendung etablierter ingenieurwissenschaftlicher Methoden.",
+        "services.content4.item1": "Produktionsoptimierung, Prozessanalysen unter Berücksichtigung von Lean-Prinzipien, Wertstromanalysen orientiert an VDI 5200",
+        "services.content4.item2": "Materialtechnische Beratung, Werkstoffauswahl unter Einbeziehung von Datenblättern, Unterstützung bei Materialprüfungen nach DIN EN ISO 6892-1",
+        "services.content4.item3": "Normative Beratung, Orientierung an Standards (DIN, ISO, ASTM, ASME)",
+        "services.content4.item4": "Qualitätssicherungsbegleitung mit statistischen Prozesskontroll-Methoden (SPC) unter Anwendung der ISO 7870",
+        "services.content4.item5": "Prozessoptimierungsberatung unter Anwendung von Six-Sigma-Methoden",
+        "services.content4.item6": "Risikoanalyse-Beratung unter Anwendung von FMEA/FMECA-Methoden (orientiert an VDI 2246)",
         
-        "services.content5.title": "International Welding Engineer (IWE)",
-        "services.content5.description": "Als zertifizierte International Welding Engineers nach IIW/EWF bieten wir umfassende Expertise in Schweißtechnik und Fügeverfahren gemäß DIN EN ISO 3834 und DIN EN 1090. Unsere Dienstleistungen umfassen die gesamte Prozesskette von der Konstruktion bis zur Qualitätssicherung.",
-        "services.content5.item1": "Schweißtechnische Berechnungen nach DIN EN 1993-1-8 (Eurocode 3)",
-        "services.content5.item2": "Schweißnahtvorbereitung und -auslegung nach DIN EN ISO 2553",
-        "services.content5.item3": "WPS/PQR nach DIN EN ISO 15614 und DIN EN ISO 15609",
-        "services.content5.item4": "Zerstörungsfreie Prüfungen (VT, PT, MT, UT, RT nach DIN EN ISO 17635)",
-        "services.content5.item5": "Schweißaufsicht nach DIN EN ISO 14731",
-        "services.content5.item6": "Zertifizierung nach DIN EN 1090 und DIN EN 15085",
+        "services.content5.title": "Schweißtechnische Beratung & Normenimplementierung",
+        "services.content5.description": "Als erfahrene Schweißtechnik-Experten mit maschinenbautechnischer Qualifikation (HTL & TU) unterstützen wir Unternehmen bei der Umsetzung schweißtechnischer Anforderungen gemäß DIN EN ISO 3834 und DIN EN 1090.",
+        "services.content5.item1": "Technische Beratung zu Schweißprozessen und Fügeverfahren",
+        "services.content5.item2": "Unterstützung bei der Dokumentenerstellung für WPS/PQR nach DIN EN ISO 15614/15609",
+        "services.content5.item3": "Schulungen zu Normenanforderungen (DIN EN ISO 2553, DIN EN 1993-1-8)",
+        "services.content5.item4": "Vorbereitung von Zertifizierungsaudits (inkl. Gap-Analysen)",
+        "services.content5.item5": "Begleitung bei zerstörungsfreien Prüfungen (VT, PT, MT, UT, RT nach DIN EN ISO 17635)",
+        "services.content5.item6": "Zertifizierungbegleitung nach DIN EN 1090 und DIN EN 15085 (Vorbereitung auf Audits – von der Dokumentation bis zur Schulung in Kooperation mit akkreditierten Partnern)",
 
         // Team
-        "team.title": "Unser Expertenteam",
-        "team.description": "Unser interdisziplinäres Team aus erfahrenen Ingenieuren, Konstrukteuren und Technikern steht für höchste Fachkompetenz und innovative Lösungen. Mit jahrzehntelanger Erfahrung in verschiedenen Branchen entwickeln wir maßgeschneiderte Lösungen für Ihre technischen Herausforderungen.",
+        "team.title": "Unser Leistungsspektrum im Überblick",
+        "team.description": "Unser Team kombiniert ingenieurwissenschaftliches Know-how mit praxisbewährter Konstruktionserfahrung. Gemeinsam mit Ihnen entwickeln wir Lösungsansätze für Ihre technischen Herausforderungen – einschließlich Unterstützung bei: Cyberphysischen Systemen (Schnittstellen zwischen Mechanik, Elektronik und Software), Nachhaltigen Technologien (Ressourceneffizienz, Lebenszyklusbetrachtungen), Digitalisierungsvorhaben (Industrie 4.0-Ansätze, Datenvernetzung).",
         "team.stat1": "Jahre Erfahrung",
-        "team.stat2": "Abgeschlossene Projekte",
+        "team.stat2": "Projekterfahrung",
         "team.stat3": "Branchen",
-        "team.stat4": "Kundenzufriedenheit",
+        "team.stat4": " Fokus auf Digitalisierung/ Nachhaltigkeit",
         
         // Projects
         "projects.title": "Aktuelle Projekte",
@@ -95,23 +95,23 @@ const translations = {
         
         // Roadmap
         "roadmap.title": "Technologie-Roadmap",
-        "roadmap.item1.title": "Multiphysik-Simulationen",
-        "roadmap.item1.text": "Einführung erweiterter Simulationsmöglichkeiten",
-        "roadmap.item2.title": "KI-Optimierung",
-        "roadmap.item2.text": "Integration von KI-basierten Algorithmen",
-        "roadmap.item3.title": "Additive Fertigung",
-        "roadmap.item3.text": "Erweiterung der Fertigungskapazitäten",
-        "roadmap.item4.title": "Digitaler Zwilling",
-        "roadmap.item4.text": "Für Produktionsanlagen",
-        "roadmap.item5.title": "Nachhaltigkeit",
-        "roadmap.item5.text": "Materialinnovationen und Kreislaufwirtschaft",
+        "roadmap.item1.title": "Erstgespräch (online / vor Ort)",
+        "roadmap.item1.text": "Besprechen des Projekstart und Umfanges, Schnittstellen sowie Peripherie und Normen/Richtlinien. Dauer des kostenlosen Erstgesprächs liegt zwischen 30min-60min ",
+        "roadmap.item2.title": "Kick-Off-Meeting",
+        "roadmap.item2.text": "Meeting mit allen Stakeholdern und Verantwortlichen des Projekts, tiefere Projektbeschreibung konkretisierung des Leisstungsumfangs und Phlichtenhefts",
+        "roadmap.item3.title": "SOP - Start of Projekt",
+        "roadmap.item3.text": "Nach erhalt aller notwendigen Projektinformationen, erfolg der interne Projektstart. gekoppelt mit zusätzlichen Besprechungen und Presäntation (online oder wenn gewünscht vor Ort) von Zwischenergebnisen nach vorheriger Milenstein Festlegung",
+        "roadmap.item4.title": "Intensive Projektumsetzungsphase ",
+        "roadmap.item4.text": "Das Projekt wird gemäß den zuvor abgesprochenen Punkten umgesetzt und Entwickelt, Im Zuge der Projektentwicklung wird stets das optimim angestrebt die durch den Kunden komunizieren Ansprüche stellen für uns das minimum der Ansprüche dar und wir sind stets getrieben von übertreffen der Vorstellung unseres Kunden.",
+        "roadmap.item5.title": "Finalisierung / Dokumentation",
+        "roadmap.item5.text": "Wir validieren die finalen Ergebnisse mit unserem Kunden und bringen die letzten gewünschten Änderungen ung Wünsche sofern diese technisch noch zu diesem Stadium umsetzbar sind um. Der Nachhaltigkeitsgedanke verfolgt uns stets in jedem Step unseres technologie-Roadmap und stellt eine wichtige Säule in unserem handeln dar. ",
         
         // News
         "news.title": "Aktuelles",
-        "news.news1.title": "BMEC erhält Innovationspreis für nachhaltige Konstruktionen",
-        "news.news1.description": "Wir freuen uns, den \"Green Engineering Award 2023\" für unser Projekt zur Materialeinsparung in Serienbauteilen erhalten zu haben. Durch optimierte Konstruktionen konnten wir bei unseren Kunden jährlich über 50 Tonnen Stahl einsparen.",
-        "news.news2.title": "Neue Softwarelizenzen für erweiterte Simulationsmöglichkeiten",
-        "news.news2.description": "Um unseren Kunden noch bessere Dienstleistungen anbieten zu können, haben wir unsere Softwarepalette erweitert. Ab sofort stehen uns ANSYS Mechanical Premium und Siemens Simcenter für komplexe Multiphysik-Simulationen zur Verfügung.",
+        "news.news1.title": "BMEC nimmt fokus auf mechanisch-digitale Systemintegration sowie Digitalisierung für ressourcenoptimierte Bauteilgestaltung",
+        "news.news1.description": "Wir freuen uns, Einsparpotenziale für unser Projekt zur Materialeinsparung umgesetzt zu haben. Durch optimierte Konstruktionen und Topologieoptimierungen ergaben sich Reduktionsmöglichkeiten.",
+        "news.news2.title": "Erweiterung unserer Simulationsdienstleistungen, wir haben unsere technischen Möglichkeiten durch neue Softwaretools erweitert, darunter auch leistungsfähige Open-Source-Lösungen. Dies ermöglicht uns:",
+        "news.news2.description": "Erweiterte Analysemöglichkeiten, Multiphysikalische Simulationsansätze, Visualisierung von Machbarkeitsstudien! Vorteile durch Open-Source-Komponenten, Flexiblere Anpassung an Kundenanforderungen,Unabhängigkeit von proprietären Systemen, Transparente Methodik nach wissenschaftlichen Standards! Leistungsmerkmale, Erweiterte Validierungsmöglichkeiten, Kosteneffiziente Lösungsansätze.",
         
         // Contact
         "contact.title": "Kontaktieren Sie uns",
@@ -124,11 +124,11 @@ const translations = {
         "contact.form.button": "Nachricht senden",
         
         // Footer
-        "footer.about": "Innovative Maschinenbaulösungen seit 2005. Unser spezialisiertes Team entwickelt maßgeschneiderte technische Lösungen für Industrie und Produktion.",
+        "footer.about": "Innovative Maschinenbaulösungen. Unsere spezialisierten Bereiche sind das Entwickeln maßgeschneiderter technischer Lösungen für Industrie und Produktion durch Kombinieren von cyberphysikalischen Anwendungen,in symbiose mit Maschinenbau-Software.",
         "footer.contact": "Kontakt",
         "footer.address1": "Technologiepark 15",
-        "footer.address2": "86159 Augsburg",
-        "footer.phone": "Tel: +49 821 1234567",
+        "footer.address2": "8010 Graz",
+        "footer.phone": "Tel: +43 821 1234567",
         "footer.links": "Links",
         "footer.legal": "Rechtliches",
         "footer.legal1": "Impressum",
@@ -137,15 +137,15 @@ const translations = {
         "footer.rights": "Alle Rechte vorbehalten.",
         
         // Ticker
-        "ticker.item1": "🚀 Neues Projekt: Entwicklung einer automatisierten Montagelinie für die Automobilindustrie",
-        "ticker.item2": "🏆 Auszeichnung: BMEC erhält Innovationspreis 2023",
-        "ticker.item3": "📅 Veranstaltung: Besuchen Sie uns auf der Hannover Messe vom 17.-21. April",
-        "ticker.item4": "🔧 Stellenangebot: Wir suchen Verstärkung im Bereich Konstruktion (m/w/d)"
+        "ticker.item1": "🚀 Neues Projekt: Entwicklung einer CAE Kopplung mit Berechnungstools in der Kommissionierungsindustrie",
+        "ticker.item2": "🏆 Auszeichnung: Mitarbeiter ist \"Star of Styria\"",
+        "ticker.item3": "📅 Veranstaltung: Besuchen Sie uns auf der Maschinenbau-Messe vom 17.-21. April",
+        "ticker.item4": "🔧 Stellenangebot: Wir suchen Verstärkung im Bereich Datascience (m/w/d)"
     },
     en: {
         // Navigation
         "nav.home": "Home",
-        "nav.team": "Team",
+        "nav.team": "Expertise",
         "nav.services": "Services",
         "nav.projects": "Projects",
         "nav.roadmap": "Roadmap",
@@ -163,39 +163,68 @@ const translations = {
         // Services
         "services.title": "Our Services",
         "services.tab1": "Construction",
-        "services.tab1.short": "Precise construction solutions according to DIN and ISO standards",
+        "services.tab1.short": "Professional construction support according to industry-standard methods & guidelines (e.g. DIN, ISO, VDI)",
         "services.tab2": "Simulation",
-        "services.tab2.short": "FEM and CFD simulations according to VDI 2206",
+        "services.tab2.short": "FEM and CFD simulations considering VDI 2206",
         "services.tab3": "Prototyping",
-        "services.tab3.short": "Modern manufacturing processes for prototypes",
+        "services.tab3.short": "Prototype manufacturing with modern technologies",
         "services.tab4": "Consulting",
-        "services.tab4.short": "Expert knowledge for your projects",
-        "services.tab5": "IWE",
+        "services.tab4.short": "Consulting with engineering expertise for your project",
+        "services.tab5": "IWE Support",
         "services.tab5.short": "Welding technology and joining processes",
         
-        "services.content1.title": "Construction and Development",
-        "services.content1.description": "Our engineers develop precise construction solutions with state-of-the-art CAD systems. From the first sketch to the finished technical drawing, we accompany your project.",
-        "services.content1.item1": "3D CAD construction with SolidWorks and Inventor",
-        "services.content1.item2": "Component and assembly construction",
-        "services.content1.item3": "Technical documentation",
-        "services.content1.item4": "Tolerance analyses",
-        "services.content1.item5": "Parts list management",
+        "services.content1.title": "Technical Construction Services According to Industry Standards",
+        "services.content1.description": "Our engineers with mechanical engineering qualifications (HTL/TU) support you in developing standards-compliant construction solutions. All services are provided within the framework of engineering consulting in accordance with applicable trade laws.",
+        "services.content1.item1": "3D CAD modeling, creation of component and assembly designs with FreeCAD, optionally also with other tools like SolidWorks, Inventor, CATIA V5, orientation to VDI guidelines (e.g. VDI 2212 for CAD modeling)",
+        "services.content1.item2": "FEM-compliant modeling, preparatory modeling for later simulation calculations and preliminary estimation of components/assemblies, creation of simulation studies",
+        "services.content1.item3": "Technical documentation, drawing creation according to ISO 7200 and DIN 6789",
+        "services.content1.item4": "Tolerance management, support for geometric product specifications (GPS)",
+        "services.content1.item5": "Parts list management with ERP interfaces (SAP, ProAlpha)",
+        "services.content1.item6": "Welding construction consulting, constructive recommendations for welding-friendly design (DIN EN 1090-1)",
         
-        "services.content2.title": "Simulation and Calculation",
-        "services.content2.description": "With FEM and CFD simulations we optimize your constructions even before the first prototype is built. This saves you time and development costs.",
-        "services.content2.item1": "Static and dynamic FEM analyses",
-        "services.content2.item2": "Thermal simulations",
-        "services.content2.item3": "Flow simulations (CFD)",
-        "services.content2.item4": "Strength and lifetime calculations",
-        "services.content2.item5": "Vibration analyses",
+        "services.content2.title": "Simulation Services According to Engineering Standards",
+        "services.content2.description": "We support you in virtual product development through scientifically based simulation methods. Our analyses are performed using established engineering methods (e.g. VDI 2206, FKM guideline) and serve as a basis for decision-making in your construction processes.",
+        "services.content2.item1": "Finite element analyses (FEA), linear and nonlinear structural analyses with FreeCAD or optionally with ANSYS/Abaqus, modal and spectral analyses for vibration investigations",
+        "services.content2.item2": "Thermal simulations with nonlinear material models, thermal investigations with coupled models",
+        "services.content2.item3": "Flow simulations (CFD), laminar and turbulent flow analyses",
+        "services.content2.item4": "Strength evaluations, orientation to FKM guideline for component design",
+        "services.content2.item5": "Validation support, assistance with experimental methods (DIC, strain gauges), comparison of simulation and measurement data",
+        "services.content2.item6": "Multiphysics simulations (thermomechanical, fluid-structure coupled)",
         
+        "services.content3.title": "Prototype Development & Test Support",
+        "services.content3.description": "We support you in realizing prototypes with modern manufacturing technologies, following established engineering standards.",
+        "services.content3.item1": "Additive manufacturing, 3D printing processes (FDM, SLS, SLA) considering VDI 3405",
+        "services.content3.item2": "CNC prototype manufacturing, precision machining including 5-axis technology, functional models as development basis",
+        "services.content3.item3": "Test support, assistance with functional validations, metrological documentation (3D scanning, coordinate measuring technology)",
+        "services.content3.item4": "Measurement and testing technology (3D scanning)",
+        "services.content3.item5": "Small series, tool-less manufacturing solutions for pre-series",
+        "services.content3.item6": "Material testing & component validation, standardized material testing, topology-optimized component evaluation, validation services. We support you in manufacturing prototypes using current production processes. Our services serve concept validation and technical further development.",
+        
+        "services.content4.title": "Technical Consulting & Engineering Services",
+        "services.content4.description": "We support companies with specialized expertise in production and quality-related issues using established engineering methods.",
+        "services.content4.item1": "Production optimization, process analyses considering lean principles, value stream analyses oriented to VDI 5200",
+        "services.content4.item2": "Material technical consulting, material selection including data sheets, support for material tests according to DIN EN ISO 6892-1",
+        "services.content4.item3": "Normative consulting, orientation to standards (DIN, ISO, ASTM, ASME)",
+        "services.content4.item4": "Quality assurance support with statistical process control methods (SPC) applying ISO 7870",
+        "services.content4.item5": "Process optimization consulting using Six Sigma methods",
+        "services.content4.item6": "Risk analysis consulting using FMEA/FMECA methods (oriented to VDI 2246)",
+        
+        "services.content5.title": "Welding Technology Consulting & Standards Implementation",
+        "services.content5.description": "As experienced welding technology experts with mechanical engineering qualifications (HTL & TU), we support companies in implementing welding technology requirements according to DIN EN ISO 3834 and DIN EN 1090.",
+        "services.content5.item1": "Technical consulting on welding processes and joining methods",
+        "services.content5.item2": "Support in creating documents for WPS/PQR according to DIN EN ISO 15614/15609",
+        "services.content5.item3": "Training on standard requirements (DIN EN ISO 2553, DIN EN 1993-1-8)",
+        "services.content5.item4": "Preparation for certification audits (including gap analyses)",
+        "services.content5.item5": "Support for non-destructive testing (VT, PT, MT, UT, RT according to DIN EN ISO 17635)",
+        "services.content5.item6": "Certification support according to DIN EN 1090 and DIN EN 15085 (Preparation for audits - from documentation to training in cooperation with accredited partners)",
+
         // Team
-        "team.title": "Our Expert Team",
-        "team.description": "Our interdisciplinary team of experienced engineers, designers and technicians stands for the highest expertise and innovative solutions. With decades of experience in various industries, we develop customized solutions for your technical challenges.",
+        "team.title": "Our Range of Services at a Glance",
+        "team.description": "Our team combines engineering know-how with proven construction experience. Together with you, we develop solution approaches for your technical challenges - including support for: Cyber-physical systems (interfaces between mechanics, electronics and software), Sustainable technologies (resource efficiency, life cycle considerations), Digitalization projects (Industry 4.0 approaches, data networking).",
         "team.stat1": "Years of Experience",
-        "team.stat2": "Completed Projects",
+        "team.stat2": "Project Experience",
         "team.stat3": "Industries",
-        "team.stat4": "Customer Satisfaction",
+        "team.stat4": "Focus on Digitalization/Sustainability",
         
         // Projects
         "projects.title": "Current Projects",
@@ -208,40 +237,40 @@ const translations = {
         
         // Roadmap
         "roadmap.title": "Technology Roadmap",
-        "roadmap.item1.title": "Multiphysics Simulations",
-        "roadmap.item1.text": "Introduction of extended simulation capabilities",
-        "roadmap.item2.title": "AI Optimization",
-        "roadmap.item2.text": "Integration of AI-based algorithms",
-        "roadmap.item3.title": "Additive Manufacturing",
-        "roadmap.item3.text": "Expansion of manufacturing capacities",
-        "roadmap.item4.title": "Digital Twin",
-        "roadmap.item4.text": "For production plants",
-        "roadmap.item5.title": "Sustainability",
-        "roadmap.item5.text": "Material innovations and circular economy",
+        "roadmap.item1.title": "Initial Consultation (online / on-site)",
+        "roadmap.item1.text": "Discussion of project start and scope, interfaces as well as peripherals and standards/guidelines. Duration of the free initial consultation is between 30-60 minutes",
+        "roadmap.item2.title": "Kick-Off Meeting",
+        "roadmap.item2.text": "Meeting with all stakeholders and responsible parties of the project, deeper project description, concretization of the scope of services and specifications",
+        "roadmap.item3.title": "SOP - Start of Project",
+        "roadmap.item3.text": "After receiving all necessary project information, the internal project start takes place. Coupled with additional meetings and presentations (online or if desired on-site) of interim results after prior milestone definition",
+        "roadmap.item4.title": "Intensive Project Implementation Phase",
+        "roadmap.item4.text": "The project is implemented and developed according to the previously agreed points. In the course of project development, the optimum is always aimed for. The requirements communicated by the customer represent the minimum of our requirements for us and we are always driven by exceeding our customer's expectations.",
+        "roadmap.item5.title": "Finalization / Documentation",
+        "roadmap.item5.text": "We validate the final results with our customer and implement the last desired changes and wishes if they are still technically feasible at this stage. The sustainability idea accompanies us constantly in every step of our technology roadmap and represents an important pillar in our actions.",
         
         // News
         "news.title": "News",
-        "news.news1.title": "BMEC receives innovation award for sustainable constructions",
-        "news.news1.description": "We are pleased to have received the \"Green Engineering Award 2023\" for our project to save material in series parts. Through optimized constructions, we were able to save more than 50 tons of steel annually for our customers.",
-        "news.news2.title": "New software licenses for extended simulation options",
-        "news.news2.description": "In order to be able to offer our customers even better services, we have expanded our software portfolio. From now on, ANSYS Mechanical Premium and Siemens Simcenter are available to us for complex multiphysics simulations.",
+        "news.news1.title": "BMEC focuses on mechanical-digital system integration and digitalization for resource-optimized component design",
+        "news.news1.description": "We are pleased to have implemented savings potential for our material saving project. Through optimized constructions and topology optimizations, reduction possibilities were achieved.",
+        "news.news2.title": "Expansion of our simulation services, we have expanded our technical capabilities with new software tools, including powerful open-source solutions. This enables us:",
+        "news.news2.description": "Extended analysis possibilities, multiphysical simulation approaches, visualization of feasibility studies! Advantages through open-source components, more flexible adaptation to customer requirements, independence from proprietary systems, transparent methodology according to scientific standards! Performance characteristics, extended validation possibilities, cost-efficient solution approaches.",
         
         // Contact
-        "contact.title": "Contact us",
+        "contact.title": "Contact Us",
         "contact.form.name": "Name",
         "contact.form.email": "Email",
         "contact.form.phone": "Phone (optional)",
         "contact.form.subject": "Subject",
-        "contact.form.message": "Your message",
+        "contact.form.message": "Your Message",
         "contact.form.privacy": "I have read and accept the privacy policy.",
-        "contact.form.button": "Send message",
+        "contact.form.button": "Send Message",
         
         // Footer
-        "footer.about": "Innovative engineering solutions since 2005. Our specialized team develops customized technical solutions for industry and production.",
+        "footer.about": "Innovative engineering solutions. Our specialized areas are developing customized technical solutions for industry and production by combining cyber-physical applications in symbiosis with mechanical engineering software.",
         "footer.contact": "Contact",
         "footer.address1": "Technology Park 15",
-        "footer.address2": "86159 Augsburg",
-        "footer.phone": "Phone: +49 821 1234567",
+        "footer.address2": "8010 Graz",
+        "footer.phone": "Tel: +43 821 1234567",
         "footer.links": "Links",
         "footer.legal": "Legal",
         "footer.legal1": "Imprint",
@@ -250,10 +279,10 @@ const translations = {
         "footer.rights": "All rights reserved.",
         
         // Ticker
-        "ticker.item1": "🚀 New project: Development of an automated assembly line for the automotive industry",
-        "ticker.item2": "🏆 Award: BMEC receives innovation award 2023",
-        "ticker.item3": "📅 Event: Visit us at Hannover Messe from April 17-21",
-        "ticker.item4": "🔧 Job offer: We are looking for reinforcement in the construction department (m/f/d)"
+        "ticker.item1": "🚀 New project: Development of a CAE coupling with calculation tools in the commissioning industry",
+        "ticker.item2": "🏆 Award: Employee is \"Star of Styria\"",
+        "ticker.item3": "📅 Event: Visit us at the Mechanical Engineering Fair from April 17-21",
+        "ticker.item4": "🔧 Job offer: We are looking for reinforcement in the field of Data Science (m/f/d)"
     }
 };
 
@@ -510,5 +539,188 @@ document.addEventListener('DOMContentLoaded', function() {
     const tickerContent = document.querySelector('.ticker-content');
     if (tickerContent) {
         tickerContent.style.animation = 'ticker 30s linear infinite';
+    }
+});
+
+// Roadmap Interaction
+document.addEventListener('DOMContentLoaded', function() {
+    const progressSteps = document.querySelectorAll('.progress-step');
+    const roadmapItems = document.querySelectorAll('.roadmap-item');
+    const progressBar = document.querySelector('.progress-bar');
+    
+    // Füge Endpunkt hinzu
+    const progressEndpoint = document.createElement('div');
+    progressEndpoint.className = 'progress-endpoint';
+    progressBar.parentNode.insertBefore(progressEndpoint, progressBar.nextSibling);
+
+    // Initiale Prozentwerte setzen
+    function initializePercentages() {
+        progressSteps.forEach((step, index) => {
+            if (index < progressSteps.length - 1) {
+                const currentPos = parseFloat(step.style.left);
+                const nextPos = parseFloat(progressSteps[index + 1].style.left);
+                const percentage = nextPos - currentPos;
+                step.setAttribute('data-percentage', percentage + '%');
+                
+                // Aktualisiere die Zeitangabe
+                const stepNumber = step.getAttribute('data-step');
+                const stepElement = document.querySelector(`.roadmap-item[data-step="${stepNumber}"]`);
+                if (stepElement) {
+                    const timeElement = stepElement.querySelector('.step-time');
+                    if (timeElement) {
+                        timeElement.textContent = `~${percentage}% der Projektzeit`;
+                    }
+                }
+            }
+        });
+    }
+    
+    initializePercentages();
+    
+    // Mache die Steps verschiebbar (außer dem ersten und letzten)
+    progressSteps.forEach((step, index) => {
+        if (index > 0 && index < progressSteps.length - 1) {
+            step.addEventListener('mousedown', startDrag);
+            step.addEventListener('touchstart', startDrag, { passive: false });
+        }
+    });
+    
+    let isDragging = false;
+    let currentStep = null;
+    let startX = 0;
+    let startLeft = 0;
+    
+    function startDrag(e) {
+        e.preventDefault();
+        isDragging = true;
+        currentStep = e.target.closest('.progress-step');
+        currentStep.classList.add('dragging');
+        
+        const progressBarRect = progressBar.getBoundingClientRect();
+        if (e.type === 'touchstart') {
+            startX = e.touches[0].clientX;
+        } else {
+            startX = e.clientX;
+        }
+        startLeft = parseFloat(currentStep.style.left) / 100;
+        
+        document.addEventListener('mousemove', dragStep);
+        document.addEventListener('touchmove', dragStep, { passive: false });
+        document.addEventListener('mouseup', stopDrag);
+        document.addEventListener('touchend', stopDrag);
+    }
+    
+    function dragStep(e) {
+        if (!isDragging) return;
+        e.preventDefault();
+        
+        const progressBarRect = progressBar.getBoundingClientRect();
+        let clientX;
+        
+        if (e.type === 'touchmove') {
+            clientX = e.touches[0].clientX;
+        } else {
+            clientX = e.clientX;
+        }
+        
+        const deltaX = clientX - startX;
+        const deltaPercentage = deltaX / progressBarRect.width;
+        let newLeft = startLeft + deltaPercentage;
+        
+        // Begrenze die Position zwischen dem vorherigen und nächsten Step
+        const stepIndex = Array.from(progressSteps).indexOf(currentStep);
+        const prevStep = progressSteps[stepIndex - 1];
+        const nextStep = progressSteps[stepIndex + 1];
+        
+        const minPos = prevStep ? parseFloat(prevStep.style.left) / 100 : 0;
+        const maxPos = nextStep ? parseFloat(nextStep.style.left) / 100 : 1;
+        
+        newLeft = Math.max(minPos, Math.min(maxPos, newLeft));
+        
+        const percentage = Math.round(newLeft * 100);
+        currentStep.style.left = `${percentage}%`;
+        
+        // Aktualisiere die Prozentangaben
+        initializePercentages();
+    }
+    
+    function stopDrag() {
+        if (!isDragging) return;
+        isDragging = false;
+        
+        if (currentStep) {
+            currentStep.classList.remove('dragging');
+            currentStep = null;
+        }
+        
+        document.removeEventListener('mousemove', dragStep);
+        document.removeEventListener('touchmove', dragStep);
+        document.removeEventListener('mouseup', stopDrag);
+        document.removeEventListener('touchend', stopDrag);
+    }
+    
+    // Highlight first step by default
+    if (roadmapItems.length > 0) {
+        roadmapItems[0].classList.add('active');
+    }
+    
+    // Click handler for progress steps
+    progressSteps.forEach(step => {
+        step.addEventListener('click', function(e) {
+            if (isDragging) {
+                e.stopPropagation();
+                return;
+            }
+            
+            const stepNumber = this.getAttribute('data-step');
+            
+            roadmapItems.forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            const targetItem = document.querySelector(`.roadmap-item[data-step="${stepNumber}"]`);
+            if (targetItem) {
+                targetItem.classList.add('active');
+                
+                targetItem.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }
+        });
+    });
+    
+    // Hover handler for roadmap items
+    roadmapItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            const stepNumber = this.getAttribute('data-step');
+            const correspondingStep = document.querySelector(`.progress-step[data-step="${stepNumber}"]`);
+            if (correspondingStep) {
+                correspondingStep.style.transform = 'translate(-50%, -50%) scale(1.3)';
+            }
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            const stepNumber = this.getAttribute('data-step');
+            const correspondingStep = document.querySelector(`.progress-step[data-step="${stepNumber}"]`);
+            if (correspondingStep && !correspondingStep.classList.contains('dragging')) {
+                correspondingStep.style.transform = 'translate(-50%, -50%)';
+            }
+        });
+    });
+
+    // Make progress bar sticky when scrolling
+    const progressContainer = document.querySelector('.roadmap-progress-container');
+    const roadmapSection = document.querySelector('.roadmap-section');
+    
+    if (progressContainer && roadmapSection) {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                progressContainer.classList.toggle('sticky-active', !entry.isIntersecting);
+            },
+            { threshold: [0] }
+        );
+        
+        observer.observe(roadmapSection);
     }
 });
