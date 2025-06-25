@@ -30,6 +30,8 @@ const translations = {
         "services.tab4.short": "Beratung mit ingenieurwissenschaftlicher Expertise für Ihr Projekt",
         "services.tab5": "IWE-Begleitung",
         "services.tab5.short": "Schweißtechnik und Fügeverfahren",
+        "services.tab6": "Vertriebsagent",
+        "services.tab6.short": "Internationale Vertriebsunterstützung und Markterschließung",
         
         "services.content1.title": "Technische Konstruktionsdienstleistungen nach Industriestandards",
         "services.content1.description": "Unsere Ingenieure mit maschinenbautechnischer Qualifikation (HTL/TU) unterstützen Sie bei der Entwicklung normenkonformer Konstruktionslösungen. Alle Leistungen erfolgen im Rahmen ingenieurwissenschaftlicher Beratung gemäß geltendem Gewerberecht.",
@@ -56,7 +58,7 @@ const translations = {
         "services.content3.item3": "Testbegleitung, Unterstützung bei Funktionsvalidierungen, Messtechnische Dokumentation (3D-Scanning, Koordinatenmesstechnik)",
         "services.content3.item4": "Mess- und Prüftechnik (3D-Scannen)",
         "services.content3.item5": "Kleinserien, Werkzeuglose Fertigungslösungen für Vorlaufserien",
-        "services.content3.item6": "Materialprüfung & Bauteilvalidierung, Standardisierte Materialprüfung, Topologieoptimierte Bauteilbewertung, Validierungsdienstleistungen.  Wir unterstützen Sie bei der Herstellung von Prototypen unter Anwendung aktueller Fertigungsverfahren. Unsere Dienstleistungen dienen der Konzeptvalidierung und technischen Weiterentwicklung.",
+        "services.content3.item6": "Materialprüfung & Bauteilvalidierung, Standardisierte Materialprüfung, Topologieoptimierte Bauteilbewertung, Validierungsdienstleistungen.  Wir unterstützen Sie bei der Herstellung von Prototypen unter Anwendung aktueller Fertigungsverfahren.",
         
         "services.content4.title": "Technische Beratung & Ingenieurdienstleistungen",
         "services.content4.description": "Wir unterstützen Unternehmen mit fachlicher Expertise bei produktions- und qualitätstechnischen Fragestellungen unter Anwendung etablierter ingenieurwissenschaftlicher Methoden.",
@@ -75,6 +77,15 @@ const translations = {
         "services.content5.item4": "Vorbereitung von Zertifizierungsaudits (inkl. Gap-Analysen)",
         "services.content5.item5": "Begleitung bei zerstörungsfreien Prüfungen (VT, PT, MT, UT, RT nach DIN EN ISO 17635)",
         "services.content5.item6": "Zertifizierungbegleitung nach DIN EN 1090 und DIN EN 15085 (Vorbereitung auf Audits – von der Dokumentation bis zur Schulung in Kooperation mit akkreditierten Partnern)",
+
+        "services.content6.title": "Internationale Vertriebsunterstützung",
+        "services.content6.description": "Wir unterstützen Sie bei der internationalen Markterschließung und Vertriebsaktivitäten mit unserem globalen Netzwerk.",
+        "services.content6.item1": "Marktanalyse und Zielgruppenidentifikation",
+        "services.content6.item2": "Vertriebskanäle und Partneridentifikation",
+        "services.content6.item3": "Internationale Vertriebsstrategieentwicklung",
+        "services.content6.item4": "Kundenakquise und Lead-Generierung",
+        "services.content6.item5": "Messe- und Eventunterstützung",
+        "services.content6.item6": "Kulturspezifische Vertriebsberatung",
 
         // Team
         "team.title": "Unser Leistungsspektrum im Überblick",
@@ -172,6 +183,8 @@ const translations = {
         "services.tab4.short": "Consulting with engineering expertise for your project",
         "services.tab5": "IWE Support",
         "services.tab5.short": "Welding technology and joining processes",
+        "services.tab6": "Sales Agent",
+        "services.tab6.short": "International sales support and market development",
         
         "services.content1.title": "Technical Construction Services According to Industry Standards",
         "services.content1.description": "Our engineers with mechanical engineering qualifications (HTL/TU) support you in developing standards-compliant construction solutions. All services are provided within the framework of engineering consulting in accordance with applicable trade laws.",
@@ -198,7 +211,7 @@ const translations = {
         "services.content3.item3": "Test support, assistance with functional validations, metrological documentation (3D scanning, coordinate measuring technology)",
         "services.content3.item4": "Measurement and testing technology (3D scanning)",
         "services.content3.item5": "Small series, tool-less manufacturing solutions for pre-series",
-        "services.content3.item6": "Material testing & component validation, standardized material testing, topology-optimized component evaluation, validation services. We support you in manufacturing prototypes using current production processes. Our services serve concept validation and technical further development.",
+        "services.content3.item6": "Material testing & component validation, standardized material testing, topology-optimized component evaluation, validation services. We support you in manufacturing prototypes using current production processes.",
         
         "services.content4.title": "Technical Consulting & Engineering Services",
         "services.content4.description": "We support companies with specialized expertise in production and quality-related issues using established engineering methods.",
@@ -217,6 +230,15 @@ const translations = {
         "services.content5.item4": "Preparation for certification audits (including gap analyses)",
         "services.content5.item5": "Support for non-destructive testing (VT, PT, MT, UT, RT according to DIN EN ISO 17635)",
         "services.content5.item6": "Certification support according to DIN EN 1090 and DIN EN 15085 (Preparation for audits - from documentation to training in cooperation with accredited partners)",
+
+        "services.content6.title": "International Sales Support",
+        "services.content6.description": "We support you in international market development and sales activities with our global network.",
+        "services.content6.item1": "Market analysis and target group identification",
+        "services.content6.item2": "Sales channels and partner identification",
+        "services.content6.item3": "International sales strategy development",
+        "services.content6.item4": "Customer acquisition and lead generation",
+        "services.content6.item5": "Trade fair and event support",
+        "services.content6.item6": "Culture-specific sales consulting",
 
         // Team
         "team.title": "Our Range of Services at a Glance",
@@ -336,7 +358,8 @@ const serviceImages = {
     'tab2': './images/SIMULATION.jpeg',
     'tab3': 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
     'tab4': './images/BERATUNG.jpeg',
-    'tab5': './images/IWE.jpeg'
+    'tab5': './images/IWE.jpeg',
+    'tab6': './images/VERTRIEB.jpeg'
 };
 
 serviceCards.forEach(card => {
@@ -723,4 +746,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         observer.observe(roadmapSection);
     }
+});
+
+// Scroll down arrow functionality
+document.querySelector('.scroll-down-arrow').addEventListener('click', function() {
+    document.querySelector('#services').scrollIntoView({
+        behavior: 'smooth'
+    });
 });
