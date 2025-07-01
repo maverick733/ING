@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie-Einstellungen | BMEC Engineering</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .rejection-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--gray-bg);
+            padding: 2rem;
+            text-align: center;
+        }
+        .rejection-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 600px;
+        }
+        .rejection-options {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 600px) {
+            .rejection-content {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="rejection-container">
+        <div class="rejection-content">
+            <h1>Cookie-Einstellungen</h1>
+            <div class="rejection-message">
+                <p>Sie haben die notwendigen Cookies abgelehnt, die für den Betrieb unserer Website erforderlich sind.</p>
+                <p>Ohne diese Cookies können wir Ihnen den Inhalt nicht sicher anzeigen.</p>
+                
+                <div class="rejection-options">
+                    <a href="/" class="btn" onclick="localStorage.removeItem('klaro'); document.cookie = 'bmec-consent=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'">
+                        Einstellungen zurücksetzen
+                    </a>
+                    <a href="https://www.google.com" class="btn secondary">
+                        Website verlassen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

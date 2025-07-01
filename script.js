@@ -1,40 +1,171 @@
-// Klaro! Konfiguration (am Anfang der Datei)
+// Consolidated Cookie Consent Configuration
 window.klaroConfig = {
-    privacyPolicy: '/datenschutz.html', // Link zur Datenschutzerklärung
+    privacyPolicy: '/datenschutz.html',
+    mustConsent: true,
+    acceptAll: true,
+    hideDeclineAll: false,
+    groupByPurpose: true,
+    storageMethod: 'cookie',
+    cookieName: 'bmec-consent',
+    cookieExpiresAfterDays: 365,
+    default: true,
+    elementID: 'klaro-modal',
+    
     translations: {
         de: {
             consentModal: {
                 title: 'Cookie-Einstellungen',
-                description: 'Wir verwenden Cookies, um die Nutzererfahrung zu verbessern. Sie können die Arten von Cookies unten auswählen.',
+                description: 'Wir verwenden Cookies, um unsere Website optimal zu gestalten und zu verbessern. Technisch notwendige Cookies sind für den Betrieb der Website erforderlich. Sie können Ihre Einstellungen jederzeit ändern.',
+                privacyPolicy: {
+                    name: 'Datenschutzerklärung',
+                    text: 'Weitere Details finden Sie in unserer {privacyPolicy}.',
+                },
             },
             purposes: {
-                necessary: 'Notwendige Cookies',
-                analytics: 'Analytics (Statistiken)',
-                marketing: 'Marketing (z.B. Tracking)',
-            },
-            googleAnalytics: {
-                description: 'Tracking mit Google Analytics',
+                necessary: 'Technisch notwendig',
+                preferences: 'Präferenzen',
+                statistics: 'Statistiken',
+                marketing: 'Marketing'
             },
         },
     },
+
     apps: [
         {
-            name: 'googleAnalytics',
-            title: 'Google Analytics',
-            purposes: ['analytics'],
-            required: false,
-            cookies: ['_ga', '_gat', '_gid'],
-            optOut: true,
+            name: 'necessary_cookies',
+            title: 'Notwendige Cookies',
+            purposes: ['necessary'],
+            required: true,
+            cookies: [
+                /^PHPSESSID$/,
+                /^csrf_token$/,
+                /^XSRF-TOKEN$/,
+                /^bmec-consent$/
+            ],
+            callback: function(consent, app) {
+                // Diese Callback wird nach dem Speichern der Einstellungen aufgerufen
+                if (consent) {
+                    removeCookieBlocker();
+                }
+            }
         },
+        {
+            name: 'language_pref',
+            title: 'Spracheinstellung',
+            purposes: ['preferences'],
+            cookies: ['lang_pref'],
+            required: false
+        },
+        {
+            name: 'google_analytics',
+            title: 'Google Analytics',
+            purposes: ['statistics'],
+            cookies: ['_ga', '_gid', '_gat'],
+            required: false,
+            optOut: true
+        }
     ],
+    
+    // Diese Funktion wird aufgerufen, nachdem der Benutzer seine Auswahl bestätigt hat
+    onAccept: function() {
+        removeCookieBlocker();
+    },
+    
+    // Diese Funktion wird aufgerufen, nachdem der Benutzer "Alle akzeptieren" auswählt
+    onAcceptAll: function() {
+        removeCookieBlocker();
+    }
 };
 
-// In script.js (nach Klaro!-Initialisierung)
-if (klaro.getConsent('googleAnalytics')) {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-XXXXX-Y'); // Ihre Tracking-ID
+function removeCookieBlocker() {
+    const blocker = document.getElementById('cookie-blocker');
+    if (blocker) {
+        blocker.remove();
+    }
+    document.body.style.overflow = '';
+    document.body.classList.remove('cookie-rejected');
+    
+    // Verstecke auch die Ablehnungs-Overlay, falls sichtbar
+    const rejectionOverlay = document.getElementById('cookie-rejection-overlay');
+    if (rejectionOverlay) {
+        rejectionOverlay.style.display = 'none';
+    }
+}
+
+
+// Cookie Rejection Handler
+function showCookieRejection() {
+    // Blur-Effekt für die gesamte Seite hinzufügen
+    document.body.style.filter = 'blur(5px)';
+    document.body.style.pointerEvents = 'none'; // Verhindert Interaktion mit der Seite
+    document.body.classList.add('cookie-rejected');
+    
+    let overlay = document.getElementById('cookie-rejection-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.id = 'cookie-rejection-overlay';
+        overlay.innerHTML = `
+            <div class="cookie-rejection-content">
+                <h2>Cookie-Zustimmung erforderlich</h2>
+                <p>Um unsere Website nutzen zu können, müssen Sie den notwendigen Cookies zustimmen.</p>
+                <button id="reconsider-cookies" class="btn">Cookie-Einstellungen ändern</button>
+            </div>
+        `;
+        document.body.appendChild(overlay);
+        
+        document.getElementById('reconsider-cookies').addEventListener('click', () => {
+            // Nur die Overlay ausblenden, aber den Blur beibehalten
+            overlay.style.display = 'none';
+            klaro.show();
+        });
+    }
+    
+    overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+// Initialize Cookie Consent
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Klaro
+    klaro.setup(klaroConfig);
+    
+    // Check if cookies are already confirmed
+    const manager = klaro.getManager();
+    if (!manager.confirmed) {
+        showCookieBlocker();
+        klaro.show();
+    }
+});
+
+function showCookieBlocker() {
+    const blocker = document.createElement('div');
+    blocker.id = 'cookie-blocker';
+    blocker.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+        z-index: 9998;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        flex-direction: column;
+        backdrop-filter: blur(5px);
+    `;
+    blocker.innerHTML = `
+        <h2 style="margin-bottom: 1rem; font-size: 1.8rem;">Willkommen bei BMEC Engineering</h2>
+        <p style="margin-bottom: 2rem; font-size: 1.1rem; max-width: 600px;">
+            Wir verwenden Cookies, um unsere Website optimal zu gestalten und zu verbessern. 
+            Bitte wählen Sie aus, welche Cookies Sie zulassen möchten.
+        </p>
+    `;
+    document.body.prepend(blocker);
+    document.body.style.overflow = 'hidden';
 }
 
 // Language translations
@@ -774,33 +905,21 @@ document.querySelector('.scroll-down-arrow').addEventListener('click', function(
     });
 });
 
-// Klaro! Konfiguration (am Anfang der Datei)
-window.klaroConfig = {
-    privacyPolicy: '/datenschutz.html', // Link zur Datenschutzerklärung
-    translations: {
-        de: {
-            consentModal: {
-                title: 'Cookie-Einstellungen',
-                description: 'Wir verwenden Cookies, um die Nutzererfahrung zu verbessern. Sie können die Arten von Cookies unten auswählen.',
-            },
-            purposes: {
-                necessary: 'Notwendige Cookies',
-                analytics: 'Analytics (Statistiken)',
-                marketing: 'Marketing (z.B. Tracking)',
-            },
-            googleAnalytics: {
-                description: 'Tracking mit Google Analytics',
-            },
-        },
-    },
-    apps: [
-        {
-            name: 'googleAnalytics',
-            title: 'Google Analytics',
-            purposes: ['analytics'],
-            required: false,
-            cookies: ['_ga', '_gat', '_gid'],
-            optOut: true,
-        },
-    ],
-};
+// Sicherheitsfunktion für externe Links
+function secureExternalLinks() {
+    document.querySelectorAll('a[href^="http"]').forEach(link => {
+        if (link.hostname !== window.location.hostname) {
+            link.setAttribute('rel', 'noopener noreferrer');
+            link.setAttribute('target', '_blank');
+        }
+    });
+}
+
+// Auch nach dynamischen Inhaltsänderungen (z.B. bei Sprachwechsel)
+function switchLanguage(lang) {
+    // ... bestehender Code ...
+    secureExternalLinks(); // Nach Sprachwechsel erneut aufrufen
+}
+
+console.log('Cookie Zustand:', klaro.getManager().getConsent('necessary_cookies'));
+console.log('Bestätigt:', klaro.getManager().confirmed);
