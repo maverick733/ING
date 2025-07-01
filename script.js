@@ -17,9 +17,9 @@ window.klaroConfig = {
                 title: 'Cookie-Einstellungen',
                 description: 'Wir verwenden Cookies, um unsere Website optimal zu gestalten und zu verbessern. Technisch notwendige Cookies sind für den Betrieb der Website erforderlich. Sie können Ihre Einstellungen jederzeit ändern.',
                 privacyPolicy: {
-                    name: 'Datenschutzerklärung',
-                    text: 'Weitere Details finden Sie in unserer {privacyPolicy}.',
-                },
+    name: 'Datenschutzerklärung',
+    text: 'Um mehr zu erfahren, lesen Sie bitte unsere <a href="/datenschutz.html" target="_blank">Datenschutzerklärung</a>.',
+},
             },
             purposes: {
                 necessary: 'Technisch notwendig',
