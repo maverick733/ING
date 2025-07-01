@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMEC Engineering - Innovative Engineering Solutions</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/klaro@0.7.14/dist/klaro.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/klaro@0.7.14/dist/klaro.min.js"></script>
 </head>
 <body>
     <header id="main-header">
@@ -42,13 +44,13 @@
                     <p data-i18n="hero.description">Wir entwickeln maßgeschneiderte technische Lösungen für Industrie und Produktion. Unser erfahrenes Team steht für Präzision, Innovation und Zuverlässigkeit.</p>
                 </div>
             </div>
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
                 <div class="slide-content">
                     <h1 data-i18n="hero.title2">Technische Exzellenz</h1>
                     <p data-i18n="hero.description2">Hochpräzise Engineering-Lösungen für anspruchsvolle industrielle Anwendungen.</p>
                 </div>
             </div>
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
                 <div class="slide-content">
                     <h1 data-i18n="hero.title3">Zukunftsorientierte Technologien</h1>
                     <p data-i18n="hero.description3">Innovationen, die Ihre Produktion auf das nächste Level bringen.</p>
@@ -354,9 +356,11 @@
                         
                         <div class="form-group">
                             <label>
-                                <input type="checkbox" id="privacy" required> 
-                                <span data-i18n="contact.form.privacy">Ich habe die Datenschutzerklärung gelesen und akzeptiere sie.</span>
-                            </label>
+  <input type="checkbox" id="privacy" required title="Bitte akzeptieren Sie die Datenschutzerklärung."> 
+    <span data-i18n="contact.form.privacy">
+      Ich stimme zu, dass meine Daten gemäß der <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> verarbeitet werden.
+  </span>
+</label>
                         </div>
                         
                         <button type="submit" class="btn" data-i18n="contact.form.button">Nachricht senden</button>
@@ -404,9 +408,10 @@
                 <div class="footer-column">
                     <h3 data-i18n="footer.legal">Rechtliches</h3>
                     <ul>
-                        <li><a href="#impressum" data-i18n="footer.legal1">Impressum</a></li>
-                        <li><a href="#datenschutz" data-i18n="footer.legal2">Datenschutz</a></li>
-                        <li><a href="#agb" data-i18n="footer.legal3">AGB</a></li>
+                        <li><a href="impressum.html" data-i18n="footer.legal1">Impressum</a></li>
+                        <li><a href="datenschutz.html" data-i18n="footer.legal2">Datenschutz</a></li>
+                        <li><a href="agb.html" data-i18n="footer.legal3">AGB</a></li>
+                        <li><a href="#" onclick="klaro.show();return false;">Cookie-Einstellungen</a></li>
                     </ul>
                 </div>
             </div>
@@ -415,6 +420,18 @@
                 &copy; 2023 BMEC Engineering GmbH. <span data-i18n="footer.rights">Alle Rechte vorbehalten.</span>
             </div>
         </div>
+<div class="image-credits">
+  <p>
+    Bildquellen: 
+    <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash</a> | 
+    Danke an alle Künstler, die ihre Werke frei verfügbar machen.
+  </p>
+</div>
+
+<div class="disclaimer">
+  <p>Alle Angaben ohne Gewähr. Die Inhalte dienen der Information und ersetzen keine individuelle Beratung. Für Inhalte externer Links übernehmen wir keine Haftung. Trotz sorgfältiger Prüfung können wir keine Haftung für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehmen.</p>
+</div>
+
     </footer>
 
     <div class="news-ticker">

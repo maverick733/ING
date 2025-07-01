@@ -1,3 +1,42 @@
+// Klaro! Konfiguration (am Anfang der Datei)
+window.klaroConfig = {
+    privacyPolicy: '/datenschutz.html', // Link zur Datenschutzerklärung
+    translations: {
+        de: {
+            consentModal: {
+                title: 'Cookie-Einstellungen',
+                description: 'Wir verwenden Cookies, um die Nutzererfahrung zu verbessern. Sie können die Arten von Cookies unten auswählen.',
+            },
+            purposes: {
+                necessary: 'Notwendige Cookies',
+                analytics: 'Analytics (Statistiken)',
+                marketing: 'Marketing (z.B. Tracking)',
+            },
+            googleAnalytics: {
+                description: 'Tracking mit Google Analytics',
+            },
+        },
+    },
+    apps: [
+        {
+            name: 'googleAnalytics',
+            title: 'Google Analytics',
+            purposes: ['analytics'],
+            required: false,
+            cookies: ['_ga', '_gat', '_gid'],
+            optOut: true,
+        },
+    ],
+};
+
+// In script.js (nach Klaro!-Initialisierung)
+if (klaro.getConsent('googleAnalytics')) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXX-Y'); // Ihre Tracking-ID
+}
+
 // Language translations
 const translations = {
     de: {
@@ -576,27 +615,7 @@ document.addEventListener('DOMContentLoaded', function() {
     progressEndpoint.className = 'progress-endpoint';
     progressBar.parentNode.insertBefore(progressEndpoint, progressBar.nextSibling);
 
-    // Initiale Prozentwerte setzen
-    function initializePercentages() {
-        progressSteps.forEach((step, index) => {
-            if (index < progressSteps.length - 1) {
-                const currentPos = parseFloat(step.style.left);
-                const nextPos = parseFloat(progressSteps[index + 1].style.left);
-                const percentage = nextPos - currentPos;
-                step.setAttribute('data-percentage', percentage + '%');
-                
-                // Aktualisiere die Zeitangabe
-                const stepNumber = step.getAttribute('data-step');
-                const stepElement = document.querySelector(`.roadmap-item[data-step="${stepNumber}"]`);
-                if (stepElement) {
-                    const timeElement = stepElement.querySelector('.step-time');
-                    if (timeElement) {
-                        timeElement.textContent = `~${percentage}% der Projektzeit`;
-                    }
-                }
-            }
-        });
-    }
+    
     
     initializePercentages();
     
@@ -754,3 +773,34 @@ document.querySelector('.scroll-down-arrow').addEventListener('click', function(
         behavior: 'smooth'
     });
 });
+
+// Klaro! Konfiguration (am Anfang der Datei)
+window.klaroConfig = {
+    privacyPolicy: '/datenschutz.html', // Link zur Datenschutzerklärung
+    translations: {
+        de: {
+            consentModal: {
+                title: 'Cookie-Einstellungen',
+                description: 'Wir verwenden Cookies, um die Nutzererfahrung zu verbessern. Sie können die Arten von Cookies unten auswählen.',
+            },
+            purposes: {
+                necessary: 'Notwendige Cookies',
+                analytics: 'Analytics (Statistiken)',
+                marketing: 'Marketing (z.B. Tracking)',
+            },
+            googleAnalytics: {
+                description: 'Tracking mit Google Analytics',
+            },
+        },
+    },
+    apps: [
+        {
+            name: 'googleAnalytics',
+            title: 'Google Analytics',
+            purposes: ['analytics'],
+            required: false,
+            cookies: ['_ga', '_gat', '_gid'],
+            optOut: true,
+        },
+    ],
+};

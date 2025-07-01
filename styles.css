@@ -14,7 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Noto Sans', Liberation Sans, sans-serif;
 }
 
 body {
@@ -746,6 +746,7 @@ nav ul li a:hover {
     border-radius: 3px;
     min-width: 30px;
     text-align: center;
+    display: none;
 }
 
 .progress-start, .progress-end {
@@ -1209,4 +1210,112 @@ footer {
     .section-title {
         font-size: 1.7rem;
     }
+}
+
+/* news ticker in Hero und footer ausgeblendet*/
+.hero-slider .news-ticker,
+footer .news-ticker {
+    display: none !important;
+}
+
+/* Diese Regeln hinzufügen */
+#main-header + .news-ticker,
+footer + .news-ticker {
+    display: none;
+}
+/* Alternativ können wir den Ticker komplett aus dem Header und Footer entfernen */
+header .news-ticker,
+footer .news-ticker {
+    display: none !important;
+}
+/* Sicherstellen dass der Ticker nur im Hauptinhalt sichtbar ist */
+.news-ticker {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Falls nötig, die ursprüngliche Ticker-Positionierung überschreiben */
+.hero-slider .news-ticker,
+footer .news-ticker {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+}
+
+
+.unsplash-credit, .image-credits {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7); /* Hellgrau auf dunklem Hintergrund */
+  text-align: center;
+  margin-top: 10px;
+}
+
+.unsplash-credit a, .image-credits a {
+  color: var(--light-color);
+  text-decoration: none;
+}
+
+.unsplash-credit a:hover, .image-credits a:hover {
+  text-decoration: underline;
+}
+
+/* Für rechtliche Abschnitte */
+.legal-section {
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.disclaimer {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Rechtliche Seiten */
+.legal-section {
+    padding: 4rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.legal-section h1 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.legal-section h2 {
+    color: var(--secondary-color);
+    margin: 1.5rem 0 0.8rem;
+    font-size: 1.2rem;
+}
+
+.legal-section p {
+    margin-bottom: 1rem;
+}
+
+/* Cookie-Banner initialisieren */
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.klaro) {
+        window.klaro.setup(window.klaroConfig);
+    }
+});
+
+/* Cookie-Banner Styling */
+.cookie-modal {
+    background-color: var(--secondary-color) !important;
+    color: white !important;
+}
+.cookie-modal .cm-btn.cm-btn-success {
+    background-color: var(--highlight-color) !important;
 }
