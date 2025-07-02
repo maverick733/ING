@@ -1,6 +1,6 @@
 // Consolidated Cookie Consent Configuration
 window.klaroConfig = {
-    privacyPolicy: '/datenschutz.html',
+    privacyPolicy: 'datenschutz.html',
     mustConsent: true,
     acceptAll: true,
     hideDeclineAll: false,
