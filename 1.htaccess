@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Cookie-Consent Check
+    RewriteCond %{HTTP_COOKIE} !bmec-cookie-consent [NC]
+    RewriteCond %{REQUEST_URI} !^/cookie-ablehnung\.html$ [NC]
+    RewriteCond %{REQUEST_URI} !^/datenschutz\.html$ [NC]
+    RewriteCond %{REQUEST_URI} !^/impressum\.html$ [NC]
+    RewriteRule ^(.*)$ /cookie-ablehnung.html [R=307,L]
+</IfModule>
