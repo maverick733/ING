@@ -923,3 +923,12 @@ function switchLanguage(lang) {
 
 console.log('Cookie Zustand:', klaro.getManager().getConsent('necessary_cookies'));
 console.log('Bestätigt:', klaro.getManager().confirmed);
+
+
+
+// Kontaktformular - Button-Status während des Sendens
+document.getElementById('contactForm')?.addEventListener('submit', function() {
+    const submitBtn = this.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Wird gesendet...';
+});

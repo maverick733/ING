@@ -324,54 +324,60 @@
     </section>
 
     <section class="contact-section" id="contact">
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-form">
-                    <h2 class="section-title" data-i18n="contact.title">Kontaktieren Sie uns</h2>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name" data-i18n="contact.form.name">Name</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email" data-i18n="contact.form.email">E-Mail</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone" data-i18n="contact.form.phone">Telefon (optional)</label>
-                            <input type="tel" id="phone" class="form-control">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject" data-i18n="contact.form.subject">Betreff</label>
-                            <input type="text" id="subject" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message" data-i18n="contact.form.message">Ihre Nachricht</label>
-                            <textarea id="message" class="form-control" required></textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>
-  <input type="checkbox" id="privacy" required title="Bitte akzeptieren Sie die Datenschutzerklärung."> 
-    <span data-i18n="contact.form.privacy">
-      Ich willige ein, dass meine Daten gemäß der <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> verarbeitet werden. (*Pflichtfeld)
-  </span>
-</label>
-                        </div>
-                        
-                        <button type="submit" class="btn" data-i18n="contact.form.button">Nachricht senden</button>
-                    </form>
-                </div>
-                <div class="contact-image">
-                    <img src="./images/kontakt.png" alt="Technische Beratung">
-                </div>
+    <div class="container">
+        <div class="contact-wrapper">
+            <div class="contact-form">
+                <h2 class="section-title" data-i18n="contact.title">Kontaktieren Sie uns</h2>
+                <form id="contactForm" action="https://formspree.io/f/mdkzjdzz" method="POST">
+                    <div class="form-group">
+                        <label for="name" data-i18n="contact.form.name">Name</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" data-i18n="contact.form.email">E-Mail</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" data-i18n="contact.form.phone">Telefon (optional)</label>
+                        <input type="tel" id="phone" name="phone" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" data-i18n="contact.form.subject">Betreff</label>
+                        <input type="text" id="subject" name="subject" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" data-i18n="contact.form.message">Ihre Nachricht</label>
+                        <textarea id="message" name="message" class="form-control" required></textarea>
+                    </div>
+                    
+                    <!-- Hidden fields für Formspree -->
+                    <input type="hidden" name="_language" value="de">
+                    <input type="hidden" name="_next" value="./danke.html">
+                    <input type="hidden" name="_subject" value="Neue Kontaktanfrage von BMEC-Website">
+                    <input type="hidden" name="_subject" value="Ihr gewünschter Betreff">
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="privacy" name="privacy" required title="Bitte akzeptieren Sie die Datenschutzerklärung."> 
+                            <span data-i18n="contact.form.privacy">
+                                Ja, ich habe die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> gelesen und akzeptiert.
+                            </span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn" data-i18n="contact.form.button">Nachricht senden</button>
+                </form>
+            </div>
+            <div class="contact-image">
+                <img src="./images/kontakt.png" alt="Technische Beratung">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <footer>
         <div class="container">
